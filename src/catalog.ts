@@ -2,18 +2,20 @@ import { z } from "zod";
 
 const id = z.string().regex(/^[a-zA-Z0-9_-]{1,80}$/);
 const title = z.string().trim().min(1).max(100).refine(value => !/[\r\n\0]/.test(value));
-const imageUrl = z.string().refine(value => /^https:\/\//.test(value) || /^assets\/[a-zA-Z0-9_./-]+$/.test(value));
+const imageUrl = z.string().refine(value => /^https:\/\//.test(value) || /^(?:assets|templates)\/[a-zA-Z0-9_./-]+$/.test(value));
 const image = z.object({ thumbnail: imageUrl, detail: imageUrl, width: z.number().positive(), height: z.number().positive(), alt: z.string() });
 const author = z.object({ name: z.string().max(100) }).default({ name: "Редакция" });
 export const moduleSchema = z.object({
   id, type: z.enum(["setting", "plot", "character"]), title,
-  summary: z.string().max(1000).default(""), description: z.string().trim().min(1).max(10000),
+  role: z.enum(["setting", "opening", "player", "lead", "support"]).optional(),
+  summary: z.string().max(1000).default(""), description: z.string().trim().min(1).max(24000),
   image: image.nullable().default(null), tags: z.array(z.string().max(80)).max(30).default([]), author,
 });
 export const storySchema = z.object({
   id, title, summary: z.string().max(1000).default(""), cover: image.nullable().default(null),
   categories: z.array(z.string().max(80)).max(30).default([]), tags: z.array(z.string().max(80)).max(30).default([]),
   author, setting_id: id, plot_id: id, character_ids: z.array(id).min(1).max(20),
+  template: z.object({ manifest: z.string().regex(/^templates\/[A-Za-z0-9_-]+\/r\d+\/manifest\.json$/), sha256: z.string().regex(/^[a-f0-9]{64}$/) }).optional(),
 });
 export const catalogSchema = z.object({ version: z.literal(2), stories: z.array(storySchema).max(2000), modules: z.array(moduleSchema).max(10000) })
   .superRefine((data, ctx) => {
