@@ -30,6 +30,11 @@ export async function compileCatalog(publicDir) {
   const seen = new Set();
   const useId = value => { if (!id(value) || seen.has(value)) fail('Invalid or duplicate ID'); seen.add(value); };
   for (const entry of registry.stories) {
+    if (entry.summary != null && (typeof entry.summary !== 'string' || entry.summary.length > 1000)) fail('Invalid summary');
+    if (entry.author != null && (typeof entry.author.name !== 'string' || entry.author.name.length > 100)) fail('Invalid author');
+    for (const key of ['tags', 'categories']) {
+      if (entry[key] != null && (!Array.isArray(entry[key]) || entry[key].length > 30 || entry[key].some(v => typeof v !== 'string' || v.length > 80))) fail('Invalid tags/categories');
+    }
     const manifestPath = safePath(entry.manifest);
     if (!/^templates\/[A-Za-z0-9_-]+\/r\d+\/manifest\.json$/.test(manifestPath)) fail('Expected versioned template directory');
     const raw = await localFile(publicDir, manifestPath, 128 * 1024);
@@ -63,6 +68,7 @@ export async function compileCatalog(publicDir) {
         if (!['setting', 'player', 'lead', 'support'].includes(m.kind)) fail('Unexpected image role');
         const bytes = await get('image', 2 * 1024 * 1024);
         if (bytes[0] !== 0xff || bytes[1] !== 0xd8) fail('Expected JPEG image');
+        if ([m.image_width, m.image_height].some(v => v != null && (!Number.isInteger(v) || v < 256 || v > 1024))) fail('Invalid image dimensions');
         const url = manifestPath.replace('manifest.json', m.image);
         image = { thumbnail: url, detail: url, width: m.image_width || 1024, height: m.image_height || 1024, alt: m.title };
       }
@@ -78,6 +84,7 @@ export async function compileCatalog(publicDir) {
     catalog.modules.push(...indexed);
   }
   const output = JSON.stringify(catalog, null, 2) + '\n';
+  if (catalog.modules.length > 10000) fail('Too many catalog modules');
   if (Buffer.byteLength(output) > 2 * 1024 * 1024) fail('Catalog index exceeds bot limit (2 MiB)');
   return catalog;
 }

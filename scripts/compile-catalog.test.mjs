@@ -46,3 +46,8 @@ it('rejects incomplete roles and unsafe paths', async () => {
   await save();
   await expect(compileCatalog(root)).rejects.toThrow('path');
 });
+it('rejects invalid public card metadata before deployment', async () => {
+  const { root } = await fixture();
+  await writeFile(join(root, 'templates/index.json'), JSON.stringify({ stories: [{ manifest: 'templates/story/r5/manifest.json', summary: 'x'.repeat(1001) }] }));
+  await expect(compileCatalog(root)).rejects.toThrow('summary');
+});
