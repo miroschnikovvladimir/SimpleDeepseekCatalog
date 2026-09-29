@@ -68,7 +68,7 @@ export async function compileCatalog(publicDir) {
         if (!['setting', 'player', 'lead', 'support'].includes(m.kind)) fail('Unexpected image role');
         const bytes = await get('image', 2 * 1024 * 1024);
         if (bytes[0] !== 0xff || bytes[1] !== 0xd8) fail('Expected JPEG image');
-        if ([m.image_width, m.image_height].some(v => v != null && (!Number.isInteger(v) || v < 256 || v > 1024))) fail('Invalid image dimensions');
+        if ([m.image_width, m.image_height].some(v => v != null && (!Number.isInteger(v) || v < 1 || v > 1024))) fail('Invalid image dimensions');
         const url = manifestPath.replace('manifest.json', m.image);
         image = { thumbnail: url, detail: url, width: m.image_width || 1024, height: m.image_height || 1024, alt: m.title };
       }

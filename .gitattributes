@@ -1,0 +1,2 @@
+# Template hashes identify exact bytes; preserve newlines across Windows and CI.
+public/templates/** -text
