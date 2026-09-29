@@ -56,6 +56,6 @@ export function importPayload(data: Catalog, selection: { story_id: string } | {
 
 declare global {
   interface Window {
-    Telegram?: { WebApp?: { platform: string; ready(): void; expand(): void; sendData(data: string): void } };
+    Telegram?: { WebApp?: { platform: string; initData?: string; ready(): void; expand(): void; sendData(data: string): void; enableClosingConfirmation?(): void; disableClosingConfirmation?(): void } };
   }
 }
