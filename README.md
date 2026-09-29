@@ -11,7 +11,8 @@
 - SSH origin: `git@github-miroschnikovvladimir:miroschnikovvladimir/SimpleDeepseekCatalog.git`.
 - Адрес сайта: https://miroschnikovvladimir.github.io/SimpleDeepseekCatalog/.
 - Интерфейс: React + TypeScript + Vite, статический `public/catalog.json`.
-- В исходном каталоге нет историй, модулей и изображений.
+- В каталоге опубликована история «Город с обратной стороны»: модульный пакет,
+  шесть стартовых дел, два главных и четыре второстепенных персонажа, девять иллюстраций.
 
 Референс: https://github.com/miroschnikovvladimir/Catalog.
 Это существующий каталог другого проекта, а не origin нового каталога.

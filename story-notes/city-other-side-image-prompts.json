@@ -1,0 +1,42 @@
+{
+  "tool": "image_gen built-in",
+  "style": "Use case: illustration-story. Original contemporary Saint Petersburg urban fantasy illustrated novel. Consistent premium painterly semi-realistic editorial illustration, natural adult proportions, restrained cinematic composition, desaturated slate blue, muted teal, warm amber accents. Smooth tonal transitions, broad light shapes, deliberately LOW artificial high-frequency detail, calm surfaces, simplified backgrounds, no noisy microtexture, no grain, no over-sharpening, no busy ornament, no HDR, no text, no lettering, no watermark. Clear focal subject; image must read beautifully at small mobile size.",
+  "images": [
+    {
+      "name": "cover",
+      "prompt": "Landscape 3:2 story cover. A recognizably Petersburg enclosed courtyard well at wet late October dusk, pale ochre and muted green classical apartment facades, one dark arch showing an impossible quiet river reflection. In the lower central area a young adult woman with shoulder-length chestnut hair wearing a dark teal coat stands beside a charismatic adult dark-haired male magician in a charcoal coat and burgundy scarf, looking into the arch. A hooded grey crow perches above them. The architecture and mysterious luminous arch are primary; the two people are small full-body figures, not detailed portraits. Calm atmospheric depth, elegant simple silhouettes, no magical fireworks. Main focal scene within central 60% so square and wide crops both work."
+    },
+    {
+      "name": "setting",
+      "prompt": "Landscape 3:2 environmental setting illustration with no people. Saint Petersburg university embankment at misty blue dusk, an ancient Egyptian stone sphinx by the Neva in foreground, distant classical architecture and bridge suggested across water, warm window lights, wet smooth granite, one delicate unnatural reflection under the water hinting at a hidden passage. Realistically plausible St Petersburg geography rather than fantasy skyline, no invented giant cathedral."
+    },
+    {
+      "name": "player",
+      "prompt": "Portrait vertical 2:3 waist-up. Alisa Belova, 27-year-old adult Russian woman, shoulder-length chestnut brown hair slightly wind-tousled, grey-green eyes, expressive intelligent face, natural beauty without glamour makeup, dark teal practical wool coat over cream sweater, a small notebook in one hand. Alert and curious with a hint of dry humour, agency and determination, not frightened or submissive. Petersburg courtyard softly blurred behind her. Framing with generous head room and shoulders so adaptive crop never cuts face."
+    },
+    {
+      "name": "lev",
+      "prompt": "Portrait vertical 2:3 waist-up. Lev Vyazov, charismatic powerful male urban magician, looks 38, lean wiry build, dark wavy slightly untidy hair, hazel eyes, light stubble, attractive expressive angular face, one eyebrow raised with an infuriating warm half-smile. Charcoal city coat, worn dark burgundy scarf, ordinary metal keyring held casually. Behind the amusement subtle fatigue and depth. Not a famous fictional character, no wizard robe or fantasy armour. Quiet locksmith workshop warm light behind him. Generous head room."
+    },
+    {
+      "name": "varvara",
+      "prompt": "Portrait vertical 2:3 of Varvara, a hooded grey crow familiar with authentic bird anatomy, grey torso and black head wings beak, intelligent gently sardonic gaze, perched on an old smooth Petersburg courtyard railing. Whole bird with generous space above head and below feet, readable expressive silhouette, soft amber workshop window in blurred background. No clothing, no human face, no extra wings, no jewellery."
+    },
+    {
+      "name": "mikhail",
+      "prompt": "Portrait vertical 2:3 waist-up. Mikhail Gromov, recurring human taxi driver aged 54, sturdy ordinary man with short greying hair and moustache, weathered kind face, calm humorous eyes, dark zip jacket over checked shirt. Standing at the open driver door of a cared-for older dark sedan, thermos cup in hand. Wet Petersburg night road softly blurred, restrained warm taxi interior illumination. Affable competent man, no ethnicity caricature, no criminal glamour, generous head room."
+    },
+    {
+      "name": "nina",
+      "prompt": "Portrait vertical 2:3 waist-up. Nina Korsakova, 44-year-old female mediator of a hidden supernatural peace office in Petersburg, short dark bob with a subtle silver streak, thoughtful direct eyes, composed independent presence, olive wool jacket and ochre scarf, a closed practical folder under arm. Quiet warm office with one lamp and blurred rain window, competent humane professional rather than military bureaucrat, natural face and mature beauty, generous head room."
+    },
+    {
+      "name": "collector",
+      "prompt": "Portrait vertical 2:3 waist-up of original antagonist the Address Collector, a hidden urban supernatural creature disguised as an elegant slender middle-aged male municipal surveyor, pale grey eyes, neat dark hair, obsolete but understated charcoal overcoat, leather folder of folded house plans. Polite chilling expression, one subtle impossible feature: his shadow in the blurred courtyard forms a narrow doorway. Human-looking face, no gore, no skull, no monstrous teeth, no busy sinister symbols. Quiet desaturated Petersburg arch background, generous head room."
+    },
+    {
+      "name": "opening",
+      "prompt": "Landscape 3:2 narrative scene inside a deep Saint Petersburg metro platform after evening crowds have thinned, softly lit pale stone, restrained marine architectural accents, ordinary train edge. A woman in a rain-darkened coat holding a small wrapped parcel stands still by a glass surface where an impossible extra passage is reflected; only one or two distant ordinary passengers. Atmospheric mystery, believable urban underground, not postapocalypse, no horror gore, no legible signage, no text. Calm composition with clear reflected-door focal point."
+    }
+  ]
+}

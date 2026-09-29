@@ -1,0 +1,111 @@
+{
+  "format": "simpledeepseek.story",
+  "version": 1,
+  "id": "city-other-side",
+  "title": "Город с обратной стороны",
+  "revision": 1,
+  "modules": [
+    {
+      "id": "city-other-side-prompt",
+      "kind": "prompt",
+      "title": "Режиссура истории",
+      "file": "modules/prompt.md",
+      "file_sha256": "863884c437d1757871321cce2eac95482e3d9ee7bc0eed7d08b9e622e41b85d9",
+      "complete": true,
+      "image": null
+    },
+    {
+      "id": "city-other-side-setting",
+      "kind": "setting",
+      "title": "Петербург с обратной стороны",
+      "file": "modules/setting.md",
+      "file_sha256": "910e58c546c99c7666b675cc7156fc55674b0cb95cb6500ff9b6fa89d28a90b3",
+      "complete": true,
+      "image": "images/setting.jpg",
+      "image_sha256": "b77c61a109c8d2a1d3bffe4b082174d0d1145f048e401f95411ea4d5884f43b7",
+      "image_width": 1024,
+      "image_height": 683
+    },
+    {
+      "id": "city-other-side-player",
+      "kind": "player",
+      "title": "Алиса Белова",
+      "file": "modules/player.md",
+      "file_sha256": "cf9f1baabef0ad340fe3b748ba999ca60e384b17c28b33efbfcdb56f8af0df4e",
+      "complete": true,
+      "image": "images/player.jpg",
+      "image_sha256": "6e183007df93a40e1f2a906b99c41f95383504f800a9c6c0c5f98c4c8ee0951a",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "city-other-side-lev",
+      "kind": "lead",
+      "title": "Лев Вязов",
+      "file": "modules/lev.md",
+      "file_sha256": "f205e762e7766597e5c64728c67f8783a5aa914bfd435cce512cbd5c417b5b68",
+      "complete": true,
+      "image": "images/lev.jpg",
+      "image_sha256": "d25ebdac71dd0f21dfd3eb428a2f0e9bdb96dcab0eabfeeb68ce8ca95f5572c8",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "city-other-side-varvara",
+      "kind": "support",
+      "title": "Варвара",
+      "file": "modules/varvara.md",
+      "file_sha256": "cf1182d1f9d97c37ede4b13f3561739114d9191fe843951fb81a719573b774ec",
+      "complete": true,
+      "image": "images/varvara.jpg",
+      "image_sha256": "6bf7def19625ea22ba1884f8fd38662e64d8c18a1c5d8c9fe035eea87f77d976",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "city-other-side-mikhail",
+      "kind": "support",
+      "title": "Михаил Громов",
+      "file": "modules/mikhail.md",
+      "file_sha256": "d223904b3e7a9d109503bf80bd53e60bba70c0910617d33d12890d38d8dd1075",
+      "complete": true,
+      "image": "images/mikhail.jpg",
+      "image_sha256": "5cdeee00aa839888094d248eb71174b354827bd9c49094478927f05440d68615",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "city-other-side-nina",
+      "kind": "support",
+      "title": "Нина Корсакова",
+      "file": "modules/nina.md",
+      "file_sha256": "c2f3e0a720e83840ca2706cd4a72f9b0ef6852345d59e006b1ee6555fc1045f1",
+      "complete": true,
+      "image": "images/nina.jpg",
+      "image_sha256": "f48b6561c9b1db6beff97ce135c59ad96eff8aee69d43d433321994323ae4d73",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "city-other-side-collector",
+      "kind": "support",
+      "title": "Аркадий Лунин",
+      "file": "modules/collector.md",
+      "file_sha256": "773ec978e2fffa47405c8674de59d7f3d8b7cbcebdb4fe863e09f4249ec5cf61",
+      "complete": true,
+      "image": "images/collector.jpg",
+      "image_sha256": "1ac4dc51a1152e3d1cf6ab61deb2caa13c708385677967100f9d9924f857b2db",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "city-other-side-opening",
+      "kind": "opening",
+      "title": "Следующая станция",
+      "file": "modules/opening.md",
+      "file_sha256": "dfd079ab90fa87c75f37d0cc8c03100ab2641789a0c70cd8af684554f8755a76",
+      "complete": true,
+      "image": null
+    }
+  ]
+}

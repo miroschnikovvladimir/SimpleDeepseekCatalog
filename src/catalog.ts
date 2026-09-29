@@ -3,12 +3,14 @@ import { z } from "zod";
 const id = z.string().regex(/^[a-zA-Z0-9_-]{1,80}$/);
 const title = z.string().trim().min(1).max(100).refine(value => !/[\r\n\0]/.test(value));
 const imageUrl = z.string().refine(value => /^https:\/\//.test(value) || /^(?:assets|templates)\/[a-zA-Z0-9_./-]+$/.test(value));
-const image = z.object({ thumbnail: imageUrl, detail: imageUrl, width: z.number().positive(), height: z.number().positive(), alt: z.string() });
+const image = z.object({ thumbnail: imageUrl, detail: imageUrl, width: z.number().positive(), height: z.number().positive(), alt: z.string(),
+  variants: z.array(z.object({ url: imageUrl, width: z.number().int().positive() })).max(8).optional() });
 const author = z.object({ name: z.string().max(100) }).default({ name: "Редакция" });
 export const moduleSchema = z.object({
   id, type: z.enum(["setting", "plot", "character"]), title,
   role: z.enum(["setting", "opening", "player", "lead", "support"]).optional(),
   summary: z.string().max(1000).default(""), description: z.string().trim().min(1).max(24000),
+  preview_description: z.string().trim().min(1).max(6000).optional(),
   image: image.nullable().default(null), tags: z.array(z.string().max(80)).max(30).default([]), author,
 });
 export const storySchema = z.object({

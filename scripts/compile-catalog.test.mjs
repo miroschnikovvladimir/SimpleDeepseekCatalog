@@ -1,9 +1,10 @@
 import { it, expect, afterEach } from 'vitest';
-import { mkdtemp, mkdir, writeFile, rm } from 'node:fs/promises';
+import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { compileCatalog } from './compile-catalog.mjs';
+import sharp from 'sharp';
 
 const directories = [];
 afterEach(async () => { for (const dir of directories.splice(0)) await rm(dir, { recursive: true, force: true }); });
@@ -50,4 +51,35 @@ it('rejects invalid public card metadata before deployment', async () => {
   const { root } = await fixture();
   await writeFile(join(root, 'templates/index.json'), JSON.stringify({ stories: [{ manifest: 'templates/story/r5/manifest.json', summary: 'x'.repeat(1001) }] }));
   await expect(compileCatalog(root)).rejects.toThrow('summary');
+});
+
+it('keeps full game text while generating real responsive images and spoiler-free previews', async () => {
+  const { root, dir, manifest, save } = await fixture();
+  const bytes = await sharp({create:{width:768,height:512,channels:3,background:'#263342'}}).jpeg().toBuffer();
+  await mkdir(join(dir, 'images'));
+  await writeFile(join(dir, 'images/cover.jpg'), bytes);
+  const setting = manifest.modules.find(m => m.kind === 'setting');
+  Object.assign(setting, {image:'images/cover.jpg', image_sha256:hash(bytes), image_width:768, image_height:512});
+  await save();
+  await writeFile(join(root, 'templates/index.json'), JSON.stringify({stories:[{manifest:'templates/story/r5/manifest.json',
+    presentation:{cover:'templates/story/r5/images/cover.jpg',modules:{opening:{summary:'Завязка',description:'Описание без разгадки',image:'templates/story/r5/images/cover.jpg'}}}}]}));
+  const result = await compileCatalog(root);
+  const opening = result.modules.find(m => m.role === 'opening');
+  expect(opening.description).toBe('Текст opening');
+  expect(opening.preview_description).toBe('Описание без разгадки');
+  expect(result.stories[0].cover.variants.map(v => v.width)).toEqual([320,640,768]);
+  for (const variant of result.stories[0].cover.variants) {
+    const metadata = await sharp(await readFile(join(root, variant.url))).metadata();
+    expect(metadata.format).toBe('webp');
+    expect(metadata.width).toBe(variant.width);
+  }
+});
+
+it('rejects presentation images outside the story revision and incomplete descriptions', async () => {
+  const {root} = await fixture();
+  const save = presentation => writeFile(join(root,'templates/index.json'), JSON.stringify({stories:[{manifest:'templates/story/r5/manifest.json',presentation}]}));
+  await save({cover:'templates/other/r1/images/cover.jpg'});
+  await expect(compileCatalog(root)).rejects.toThrow('cover path');
+  await save({modules:{opening:{summary:'Кратко'}}});
+  await expect(compileCatalog(root)).rejects.toThrow('preview');
 });
