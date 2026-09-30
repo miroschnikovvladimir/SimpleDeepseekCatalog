@@ -31,3 +31,12 @@ jobs:
           path: dist
       - uses: actions/deploy-pages@v4
         id: deployment
+      - name: Verify public application and all story files
+        env:
+          CATALOG_SITE: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          for attempt in 1 2 3; do
+            if npm run verify:published -- --url "$CATALOG_SITE" --commit "$GITHUB_SHA"; then exit 0; fi
+            sleep 10
+          done
+          exit 1

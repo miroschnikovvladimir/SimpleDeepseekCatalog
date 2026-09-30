@@ -1,0 +1,1035 @@
+{
+  "version": 2,
+  "stories": [
+    {
+      "id": "city-other-side",
+      "title": "Город с обратной стороны",
+      "summary": "В Петербурге за привычными фасадами живут существа, а некоторые двери ведут по чужим правилам. Начни путь ученицы рядом с харизматичным магом — от первого случая в метро до собственных расследований.",
+      "cover": {
+        "thumbnail": "templates/city-other-side/r1/images/cover-320.webp",
+        "detail": "templates/city-other-side/r1/images/cover-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Город с обратной стороны",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/cover-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/cover-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/cover-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "categories": [
+        "Мистика",
+        "Городское фэнтези"
+      ],
+      "tags": [
+        "Санкт-Петербург",
+        "Расследования",
+        "Медленный роман",
+        "Маг-наставник",
+        "Существа",
+        "Эпизодические приключения"
+      ],
+      "author": {
+        "name": "Администрация"
+      },
+      "setting_id": "city-other-side-setting",
+      "plot_id": "city-other-side-opening",
+      "character_ids": [
+        "city-other-side-player",
+        "city-other-side-lev",
+        "city-other-side-varvara",
+        "city-other-side-mikhail",
+        "city-other-side-nina",
+        "city-other-side-collector"
+      ],
+      "template": {
+        "manifest": "templates/city-other-side/r1/manifest.json",
+        "sha256": "dbab63063ecf5cbd451340ea88640175ec6af742544b9be2fcc4962ffd29cde0"
+      }
+    },
+    {
+      "id": "sea-without-maps",
+      "title": "Море, которого нет на картах",
+      "summary": "Посылка от пропавшей сестры приводит тебя на корабль, который ходит в море за пределами обычных карт. Исследуй острова, найди её след и узнай, почему обаятельный капитан узнаёт присланный ключ.",
+      "cover": {
+        "thumbnail": "templates/sea-without-maps/r1/images/cover-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/cover-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Море, которого нет на картах",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/cover-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/cover-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/cover-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "categories": [
+        "Приключение",
+        "Морское фэнтези"
+      ],
+      "tags": [
+        "Парусный корабль",
+        "Острова",
+        "Поиск сестры",
+        "Медленный роман",
+        "Капитан",
+        "Команда",
+        "Исследования"
+      ],
+      "author": {
+        "name": "Администрация"
+      },
+      "setting_id": "sea-without-maps-setting",
+      "plot_id": "sea-without-maps-opening",
+      "character_ids": [
+        "sea-without-maps-player",
+        "sea-without-maps-adrian",
+        "sea-without-maps-mara",
+        "sea-without-maps-teya",
+        "sea-without-maps-jonas",
+        "sea-without-maps-savva",
+        "sea-without-maps-irena"
+      ],
+      "template": {
+        "manifest": "templates/sea-without-maps/r1/manifest.json",
+        "sha256": "725938dd2c8c9a40ed40518dcf7f017ee75990b57a005c5fda6aafcd1262c963"
+      }
+    },
+    {
+      "id": "last-train-to-summer",
+      "title": "Последний поезд к лету",
+      "summary": "Последний рейс перед зимой идёт к побережью, с которым восемнадцать лет нет надёжной связи. Пройди путь на экспедиционном поезде, найди живое лето и реши, где твой дом — и есть ли в нём место обаятельному разведчику.",
+      "cover": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/cover-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/cover-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Последний поезд к лету",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/cover-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/cover-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/cover-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "categories": [
+        "Приключение",
+        "Климатическое фэнтези"
+      ],
+      "tags": [
+        "Поезд",
+        "Экспедиция",
+        "Медленный роман",
+        "Разведчик",
+        "Команда",
+        "Растения",
+        "Выбор дома",
+        "Зима"
+      ],
+      "author": {
+        "name": "Администрация"
+      },
+      "setting_id": "last-train-to-summer-setting",
+      "plot_id": "last-train-to-summer-opening",
+      "character_ids": [
+        "last-train-to-summer-player",
+        "last-train-to-summer-mark",
+        "last-train-to-summer-roza",
+        "last-train-to-summer-vesta",
+        "last-train-to-summer-amir",
+        "last-train-to-summer-nika",
+        "last-train-to-summer-gleb"
+      ],
+      "template": {
+        "manifest": "templates/last-train-to-summer/r1/manifest.json",
+        "sha256": "84c860c5b6c04371777c0a828cde21ef1ca96a3354b83d10de4522dc8dbc8832"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "city-other-side-setting",
+      "type": "setting",
+      "role": "setting",
+      "title": "Петербург с обратной стороны",
+      "summary": "Петербург, в котором соседняя арка может привести в незнакомый двор, а старое обещание — удержать целый дом.",
+      "image": {
+        "thumbnail": "templates/city-other-side/r1/images/setting-320.webp",
+        "detail": "templates/city-other-side/r1/images/setting-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Петербург с обратной стороны",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/setting-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/setting-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/setting-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Современный Петербург. Конец октября, короткий световой день, мокрые набережные и тёплые кухни после ночных вылазок.\n\nЗа обычными фасадами живут существа, которым тоже нужны дом, работа и договорённости с соседями. Хрупкое Согласие поддерживает небольшая Контора посредников. Не всякий нечеловеческий житель опасен, и не всякую проблему решает бой.\n\nКоломна станет домашней территорией; Невский, мосты, сфинксы и глубокие станции метро — местами расследований. У каждого пути свои условия, а у каждого обещания — стороны и цена. Здесь надо думать о последнем поезде, разряженном телефоне и том, кто встретит снаружи.\n\nФормат: отдельные завершённые дела, последствия и передышки между ними. После стартовой арки открываются самостоятельные приключения."
+    },
+    {
+      "id": "city-other-side-player",
+      "type": "character",
+      "role": "player",
+      "title": "Алиса Белова",
+      "summary": "27 лет. Редактор, которая замечает несовпадения — даже там, где все остальные уверены, что ничего не изменилось.",
+      "image": {
+        "thumbnail": "templates/city-other-side/r1/images/player-320.webp",
+        "detail": "templates/city-other-side/r1/images/player-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Алиса Белова",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/player-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/player-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/player-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Алиса Белова — взрослая героиня под контролем игрока. До первой сцены можно изменить имя, профессию и бытовые детали.\n\nВ исходном варианте она работает редактором, живёт отдельно и привыкла проверять факты. Однажды знакомая городская география перестаёт сходиться: дверь отражается там, где нет прохода, а у чужой комнаты будто другой хозяин.\n\nПуть героини — от первого наблюдения к собственным знаниям, связям и самостоятельным делам. Её чувства, решения и отношения определяет игрок. Приключения доступны и без романтической линии."
+    },
+    {
+      "id": "city-other-side-lev",
+      "type": "character",
+      "role": "lead",
+      "title": "Лев Вязов",
+      "summary": "Харизматичный маг путей и обязательств: умный, самоуверенный, смешной — и иногда опасно увлечённый красивой идеей.",
+      "image": {
+        "thumbnail": "templates/city-other-side/r1/images/lev-320.webp",
+        "detail": "templates/city-other-side/r1/images/lev-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Лев Вязов",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/lev-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/lev-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/lev-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Лев Вязов держит мастерскую ключей в Коломне и знает о городских проходах гораздо больше, чем стоит рассказывать случайному клиенту.\n\nОн умеет договариваться с неудобными существами, чинить сломанное и ужасно доволен собой после удачного фокуса. Его лёгкость может раздражать; внимательность и настоящая доброта становятся видны в конкретных поступках.\n\nОн может стать наставником, партнёром по расследованиям и любовным интересом. Однако доверие требует честности, а совместный риск — согласия. За его весельем есть прошлое, о котором он говорит неохотно."
+    },
+    {
+      "id": "city-other-side-varvara",
+      "type": "character",
+      "role": "support",
+      "title": "Варвара",
+      "summary": "Серая ворона-фамильяр, давняя спутница Льва. Хорошо знает дворы и особенно ценит планы, в которых предусмотрен выход.",
+      "image": {
+        "thumbnail": "templates/city-other-side/r1/images/varvara-320.webp",
+        "detail": "templates/city-other-side/r1/images/varvara-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Варвара",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/varvara-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/varvara-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/varvara-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Варвара — самостоятельная союзница, а не инструмент мага. Смотрит на город с высоты перил, любит еду, точные условия и язвительные короткие замечания.\n\nМожет разведать открытый двор, заметить преследование и доставить лёгкое сообщение. Чужие тайны не знает заранее. Её доверие появляется через поступки, а право отказаться от ненужного риска остаётся всегда."
+    },
+    {
+      "id": "city-other-side-mikhail",
+      "type": "character",
+      "role": "support",
+      "title": "Михаил Громов",
+      "summary": "Водитель с термосом, тихим радио и слишком смелыми объездами. Важно сказать ему, где встречаться, если адрес исчезнет.",
+      "image": {
+        "thumbnail": "templates/city-other-side/r1/images/mikhail-320.webp",
+        "detail": "templates/city-other-side/r1/images/mikhail-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Михаил Громов",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/mikhail-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/mikhail-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/mikhail-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Михаил Громов — обычный человек, знакомый с необычной работой Конторы. Его машина часто означает тепло, возвращение домой и короткую передышку после дела.\n\nОн ворчит на перекрытия, спорит с навигатором и помнит полезные маршруты. При этом ждёт ясной точки встречи и предупреждения об опасности. Магии у него нет: выдержка, опыт и умение дождаться иногда полезнее очередного заклинания."
+    },
+    {
+      "id": "city-other-side-nina",
+      "type": "character",
+      "role": "support",
+      "title": "Нина Корсакова",
+      "summary": "Посредница Конторы. Помогает существам и людям договариваться, а талантливым магам — помнить о цене своих планов.",
+      "image": {
+        "thumbnail": "templates/city-other-side/r1/images/nina-320.webp",
+        "detail": "templates/city-other-side/r1/images/nina-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Нина Корсакова",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/nina-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/nina-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/nina-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Нина Корсакова ведёт обращения, свидетельства и местные договорённости. У неё прямой взгляд, практичная папка и привычка задавать неприятно точные вопросы.\n\nЗащищает слабую сторону сделки, умеет признать ограниченность ресурсов и не считает громкую уверенность доказательством. Может стать важной опорой для самостоятельного пути героини: дать консультацию, первый небольшой случай и связь с людьми, которые помогут снаружи."
+    },
+    {
+      "id": "city-other-side-collector",
+      "type": "character",
+      "role": "support",
+      "title": "Аркадий Лунин",
+      "summary": "Вежливый специалист по старым планам домов. Уверяет, что даже потерянное место можно сохранить — если знать способ.",
+      "image": {
+        "thumbnail": "templates/city-other-side/r1/images/collector-320.webp",
+        "detail": "templates/city-other-side/r1/images/collector-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Аркадий Лунин",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/collector-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/collector-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/collector-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Аркадий Лунин работает с городскими планами и исчезнувшими адресами. Аккуратный, спокойный, внимательный к словам, он предлагает помощь там, где обычная карта уже не даёт ответа.\n\nЕго интерес к забытым местам может оказаться полезным. Но в скрытом Петербурге стоит уточнять, что именно обещает проводник — и какие условия он оставляет за рамками разговора. Больше о его роли станет известно во время игры."
+    },
+    {
+      "id": "city-other-side-opening",
+      "type": "plot",
+      "role": "opening",
+      "title": "Следующая станция",
+      "summary": "На глубокой станции метро незнакомая женщина просит показать дорогу домой. Только такого дома в городе больше нет.",
+      "image": {
+        "thumbnail": "templates/city-other-side/r1/images/opening-320.webp",
+        "detail": "templates/city-other-side/r1/images/opening-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Следующая станция",
+        "variants": [
+          {
+            "url": "templates/city-other-side/r1/images/opening-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/city-other-side/r1/images/opening-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/city-other-side/r1/images/opening-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Поздний вечер на «Адмиралтейской». После долгого спуска обычный шум станции почему-то затихает у одного участка платформы. Женщина в промокшем пальто держит небольшой свёрток и спрашивает дорогу к знакомому, но невозможному адресу.\n\nВ стекле за ней виден проход. На самой стене его нет. Кто-то неподалёку уже предлагает проводить её.\n\nШесть стартовых дел познакомят героиню со скрытыми жителями, правилами проходов и собственной способностью замечать несоответствия. Между расследованиями останется время на обычную жизнь и отношения. Итогом станет возможность вести новые дела самостоятельно.\n\nНажми «Играть» в каталоге, открытом через бота: создастся твоя отдельная копия шаблона."
+    },
+    {
+      "id": "sea-without-maps-setting",
+      "type": "setting",
+      "role": "setting",
+      "title": "Приливное море и «Встречный ветер»",
+      "summary": "Парусные рейсы между островами, доступ к которым меняется с приливом. Корабль станет домом, а карты — только началом пути.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/setting-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/setting-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Приливное море и «Встречный ветер»",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/setting-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/setting-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/setting-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "За Серой протокой лежит Приливное море: островные гавани, затопленные сады, тихие банки и одинокие маяки. Здесь маршрут зависит от окна воды, состояния береговых створов и того, кто готов поддерживать дорогу.\n\n«Встречный ветер» — небольшая шхуна с собственной командой, кают-компанией, рабочими заботами и свободной каютой для тебя. Между опасными вылазками будут ремонт, общие ужины, береговые праздники и разговоры на вахте.\n\nЭто самостоятельный мир морского фэнтези. Приключения требуют наблюдательности и подготовки; разумный обход или переговоры могут оказаться полезнее боя."
+    },
+    {
+      "id": "sea-without-maps-player",
+      "type": "character",
+      "role": "player",
+      "title": "Элина Сорель",
+      "summary": "Элина Сорель, 28 лет. Реставратор карт, которая получает посылку от пропавшей сестры и решает проверить невозможный маршрут.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/player-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/player-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Элина Сорель",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/player-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/player-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/player-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Элина восстанавливает карты и переплёты в обычном приморском городе. Её сестра Мара ушла в экспедицию восемь месяцев назад; с тех пор от неё не было писем. Теперь пришли ключ, оплаченный билет и тревожная записка.\n\nРабота с документами даст героине своё место в команде. Морским навыкам можно научиться, а опасные задачи — поручить подготовленному человеку. Имя, внешность, профессию и бытовые детали можно изменить перед началом.\n\nРешения, чувства, отношения с сестрой и романтический выбор принадлежат игроку. Путь доступен и без романа."
+    },
+    {
+      "id": "sea-without-maps-adrian",
+      "type": "character",
+      "role": "lead",
+      "title": "Адриан Вейл",
+      "summary": "Адриан Вейл, 36 лет. Обаятельный капитан, который любит свою команду, хорошо знает море и слишком долго откладывает один разговор.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/adrian-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/adrian-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Адриан Вейл",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/adrian-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/adrian-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/adrian-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Адриан командует «Встречным ветром». Он умеет провести корабль через сложный створ, договориться в неудобном порту и сделать тяжёлый день немного легче. Его уверенность притягивает — и иногда мешает вовремя признать ошибку.\n\nОн знаком с Марой и узнаёт присланный ключ. Но прежде чем взять её сестру в экспедицию, хочет поговорить о риске рейса.\n\nМожет стать партнёром по приключениям и любовным интересом. Близость растёт через любопытство, совместную работу, юмор и открытость; она не обязательна для поиска сестры и места на корабле."
+    },
+    {
+      "id": "sea-without-maps-mara",
+      "type": "character",
+      "role": "support",
+      "title": "Мара Сорель",
+      "summary": "Мара Сорель, 33 года. Полевой картограф и старшая сестра героини. Её последнее письмо пришло из Соляной гавани.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/mara-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/mara-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Мара Сорель",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/mara-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/mara-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/mara-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Мара любит проверять карты на месте: по воде, береговым знакам и разговорам с теми, кто ходит этим путём каждый день. Её экспедиции часто затягиваются, но восемь месяцев молчания — слишком долгий срок даже для неё.\n\nВ Лорне остались её письма и люди, которые знают её совсем иначе, чем островные смотрители. На «Встречном ветре» хранится экспедиционный архив.\n\nЧто произошло с Марой и почему её посылка пришла только теперь, предстоит выяснить во время игры. Отношения сестёр можно согласовать перед началом."
+    },
+    {
+      "id": "sea-without-maps-teya",
+      "type": "character",
+      "role": "support",
+      "title": "Тея Раск",
+      "summary": "Тея Раск, 41 год. Первая помощница: проверит страховку, объяснит работу и напомнит, что у хорошего плана должен быть выход.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/teya-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/teya-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Тея Раск",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/teya-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/teya-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/teya-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Тея ведёт вахты и ремонт, обучает новичков и умеет остановить даже уверенного капитана, если риск не проверен. Её уважение можно заработать вниманием к работе и выполненными обещаниями.\n\nЗа берегом у неё есть семья и собственные планы. На корабле — заработанная доля и голос при больших решениях. Она способна стать важной союзницей героини, но не будет выбирать за неё, кому доверять и кого любить."
+    },
+    {
+      "id": "sea-without-maps-jonas",
+      "type": "character",
+      "role": "support",
+      "title": "Йонас Мир",
+      "summary": "Йонас Мир, 46 лет. Судовой врач, который думает о людях после приключения не меньше, чем во время него.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/jonas-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/jonas-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Йонас Мир",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/jonas-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/jonas-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/jonas-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "У Йонаса есть медицинский ящик, береговые коллеги и привычка замечать, кто не ел после тяжёлой вахты. Он знает пределы своих средств и не обещает невозможного.\n\nХочет наладить снабжение малых островов и может помочь найти людей, которые видят другую сторону портовых распоряжений. С ним возможны тихая дружба, совместная работа и разговор, не требующий немедленного ответа."
+    },
+    {
+      "id": "sea-without-maps-savva",
+      "type": "character",
+      "role": "support",
+      "title": "Савва Орин",
+      "summary": "Савва Орин, 62 года. Штурман, который сначала проверит число, а потом поверит красивой истории о новом острове.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/savva-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/savva-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Савва Орин",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/savva-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/savva-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/savva-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Савва знает таблицы приливов, береговые ориентиры и цену неверно указанного колодца. Он вырос на малом острове и хочет оставить после себя понятные карты и подготовленных смотрителей.\n\nМожет научить героиню читать маршрутные записи и поможет проверить найденные листы. Однако даже опытному штурману нужны актуальные измерения: старая карта сама по себе не гарантирует безопасного прохода."
+    },
+    {
+      "id": "sea-without-maps-irena",
+      "type": "character",
+      "role": "support",
+      "title": "Ирена Восс",
+      "summary": "Ирена Восс, 49 лет. Глава Палаты путей. Предлагает безопасные лицензированные рейсы и хочет знать, какие карты ты везёшь.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/irena-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/irena-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Ирена Восс",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/irena-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/irena-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/irena-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Палата ведёт морские записи, выдаёт лицензии и помогает судам после аварий. Ирена уверена, что предсказуемые маршруты стоят строгих правил. Многие капитаны готовы с ней согласиться.\n\nЕё условия могут открыть порт, ускорить ремонт и обеспечить законный статус рейсу. Но прежде чем принять помощь, стоит уточнить, кто получит доступ к твоим измерениям и чего потребует взамен."
+    },
+    {
+      "id": "sea-without-maps-opening",
+      "type": "plot",
+      "role": "opening",
+      "title": "Письмо, которое опоздало",
+      "summary": "Посылка от пропавшей сестры: ключ, билет и записка «Не верь тому, кто скажет, что я утонула». Капитан узнаёт ключ раньше, чем твоё имя.",
+      "image": {
+        "thumbnail": "templates/sea-without-maps/r1/images/opening-320.webp",
+        "detail": "templates/sea-without-maps/r1/images/opening-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Письмо, которое опоздало",
+        "variants": [
+          {
+            "url": "templates/sea-without-maps/r1/images/opening-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/opening-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/sea-without-maps/r1/images/opening-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "На Старом молу готовится к отходу «Встречный ветер». Билет действителен, каюта свободна, но капитан неожиданно перестаёт улыбаться, заметив ключ в твоей руке.\n\nВпереди — затопленный архив, островные порты, опасный переход и поиск сестры. Старая карта даст направление; остальное придётся узнавать у людей, которые не всегда согласны друг с другом.\n\nСемь частей стартовой экспедиции складываются в завершённое приключение. Между ними остаётся место обычной жизни команды и медленному роману. После развязки открыты новые рейсы.\n\n«Играть» в каталоге, открытом через бота, создаст отдельную личную копию истории."
+    },
+    {
+      "id": "last-train-to-summer-setting",
+      "type": "setting",
+      "role": "setting",
+      "title": "Стеклянный фронт и поезд «Перелёт»",
+      "summary": "Экспедиционный поезд, ледяной лес и южная линия, по которой восемнадцать лет не было надёжных рейсов.",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/setting-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/setting-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Стеклянный фронт и поезд «Перелёт»",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/setting-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/setting-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/setting-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Из северной Кромы выходит «Перелёт»: красный локомотив, семь зелёных вагонов, теплица с рассадой и люди со своими причинами ехать. У них есть короткое сезонное окно, чтобы проверить дорогу к Летнему берегу.\n\nСтеклянный фронт покрывает деревья прозрачными корками, искажает расстояния и мешает связи. Для путешествия нужны наблюдение, помощь специалистов и возможность отступить. На каждой остановке будет собственное приключение.\n\nПоезд станет постоянным домом экспедиции: общие ужины, рабочие споры, личное пространство, музыка и разговоры после вылазок. Это самостоятельное фэнтези с индустриальной техникой и природной аномалией."
+    },
+    {
+      "id": "last-train-to-summer-player",
+      "type": "character",
+      "role": "player",
+      "title": "Ася Рябинина",
+      "summary": "Ася Рябинина, 29 лет. Везёт коллекцию семян и умеет замечать живую среду там, где остальные видят только препятствие на пути.",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/player-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/player-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Ася Рябинина",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/player-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/player-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/player-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Ася работает с семенами и опытными теплицами. Её знания пригодятся в вагоне, на остановках и при встрече с новым климатом. Морозостойкость, влажность и следы человеческого ухода могут сказать о месте больше, чем старая карта.\n\nУ неё есть работа, личные вещи, отдельный отсек и причины интересоваться югом. Их можно согласовать перед началом, как и имя, внешность, профессию и бытовые детали.\n\nИгрок выбирает чувства, отношения и дальнейшее место жизни. Опасные вылазки и роман не обязательны для полноценного участия в экспедиции."
+    },
+    {
+      "id": "last-train-to-summer-mark",
+      "type": "character",
+      "role": "lead",
+      "title": "Марк Северин",
+      "summary": "Марк Северин, 34 года. Начальник разведчиков: отличный спутник в пути и человек, которому трудно отвечать на вопрос «а что после рейса?».",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/mark-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/mark-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Марк Северин",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/mark-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/mark-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/mark-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Марк умеет найти укрытие, заметить усталость спутника и вернуть хорошее настроение после тяжёлого перехода. Легко интересуется чужой работой и любит вид поездных окон вечером.\n\nОн привык жить от участка к участку и принимать новую задачу раньше, чем разобрался с прежним обещанием. Совместные приключения покажут и его внимательность, и цену этой привычки.\n\nМожет стать любовным интересом, другом или коллегой. Медленный роман развивается через добровольное время, взаимное уважение, юмор и разговоры о будущем."
+    },
+    {
+      "id": "last-train-to-summer-roza",
+      "type": "character",
+      "role": "support",
+      "title": "Роза Данич",
+      "summary": "Роза Данич, 49 лет. Собрала экспедицию и отвечает за людей, груз и решения, которые нельзя принять одной красивой речью.",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/roza-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/roza-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Роза Данич",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/roza-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/roza-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/roza-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Роза умеет договариваться о рейсе и видеть незаметный чужой труд. Хочет привезти проверенные сведения о южной линии и открыть возможность следующих поездок.\n\nЕй трудно отказаться от первоначального плана, но она способна услышать подтверждённое возражение. При изменении цели ей придётся учитывать людей, которым нужен возврат, и тех, кто увидит на юге свою работу.\n\nОценивает профессиональные решения отдельно от личных отношений. Может стать опорой и участницей содержательного спора."
+    },
+    {
+      "id": "last-train-to-summer-vesta",
+      "type": "character",
+      "role": "support",
+      "title": "Веста Климова",
+      "summary": "Веста Климова, 37 лет. Машинистка и механик. Знает, когда состав можно вести дальше и когда лучше сначала проверить чужую уверенность.",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/vesta-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/vesta-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Веста Климова",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/vesta-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/vesta-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/vesta-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Веста участвовала в переделке «Перелёта» для экспедиционной работы. Для неё поезд — понятная техника, которую можно беречь, чинить и использовать осмысленно.\n\nОбъясняет ограничения и варианты: материал, время, нагрузку, обход. Не обещает перевезти состав через любой обрыв силой смелости.\n\nС Асей её связывает работа тепличного вагона. Общая проверка обогрева или вечер в кабине могут стать началом дружбы, которая живёт отдельно от романтической линии."
+    },
+    {
+      "id": "last-train-to-summer-amir",
+      "type": "character",
+      "role": "support",
+      "title": "Амир Саади",
+      "summary": "Амир Саади, 43 года. Полевой метеоролог: даёт прогноз вместе с пределами уверенности и просит записать, где именно сделано наблюдение.",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/amir-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/amir-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Амир Саади",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/amir-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/amir-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/amir-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Амир знает северные посты, состояние фронта и цену неполного ряда измерений. Он хочет сделать рейсы предсказуемее, сохранив возможность честно сказать «этого мы пока не знаем».\n\nПолевые наблюдения героини могут дополнить его приборы. На новом участке ему тоже придётся учиться у местных и пересматривать прежнюю модель.\n\nСпокойный собеседник с собственной жизнью и чувством юмора. Не объявляет погоду волшебным испытанием характера."
+    },
+    {
+      "id": "last-train-to-summer-nika",
+      "type": "character",
+      "role": "support",
+      "title": "Ника Ланская",
+      "summary": "Ника Ланская, 25 лет. Знакомство на южном участке, которое поможет взглянуть на экспедицию глазами людей за пределами северных карт.",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/nika-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/nika-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Ника Ланская",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/nika-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/nika-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/nika-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Ника знает прибрежные тропы и умеет замечать, когда приезжие слишком рано решили, что уже всё поняли. Любопытная, прямая и готовая спорить по делу.\n\nУ неё есть свои близкие и планы, связанные с дорогами и обменом. Она может стать важной коллегой героини, но не будет принимать за неё решение, где жить и кого любить.\n\nОбстоятельства знакомства и то, что она расскажет о Летнем береге, откроются во время игры."
+    },
+    {
+      "id": "last-train-to-summer-gleb",
+      "type": "character",
+      "role": "support",
+      "title": "Глеб Яров",
+      "summary": "Глеб Яров, 56 лет. Смотритель последнего постоянного северного поста. Хранит записи о рейсах и не считает слух подтверждённой картой.",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/gleb-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/gleb-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Глеб Яров",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/gleb-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/gleb-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/gleb-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "На станции Вереск у Глеба есть журнал, чай, полка потерянных вещей и обычная жизнь небольшого поселения. Он помогал прежним походам и помнит, какие выводы действительно были сделаны.\n\nМожет открыть другой взгляд на старые записи о юге, помочь отправить письмо домой и показать исходные данные для следующего участка.\n\nХочет, чтобы его наблюдения стали частью надёжной общей работы, а не очередной легендой, которую перескажут без даты и источника."
+    },
+    {
+      "id": "last-train-to-summer-opening",
+      "type": "plot",
+      "role": "opening",
+      "title": "Место у тёплого окна",
+      "summary": "Два ящика семян, тёплый вагон и разведчик, который сначала спрашивает, где у груза верх. До отхода осталось время на первый разговор.",
+      "image": {
+        "thumbnail": "templates/last-train-to-summer/r1/images/opening-320.webp",
+        "detail": "templates/last-train-to-summer/r1/images/opening-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Место у тёплого окна",
+        "variants": [
+          {
+            "url": "templates/last-train-to-summer/r1/images/opening-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/opening-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/last-train-to-summer/r1/images/opening-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "На боковой платформе Кромы готовят последний доступный рейс перед закрытием перевала. За обледенелым стеклом тепличного вагона видны зелёные листья; из кухни доносится обычный спор о кружках.\n\nМарк предлагает помочь с погрузкой. Роза ждёт специалистку, Веста проверяет состав, а впереди лежит дорога к побережью, с которым давно нет надёжной связи.\n\nВосемь частей стартовой экспедиции: станции, повреждённый мост, Стеклянный лес, южные тропы и выбор будущего. После завершения доступны новые рейсы и жизнь между ними.\n\n«Играть» в каталоге, открытом через бота, создаст твою отдельную личную копию истории."
+    }
+  ]
+}

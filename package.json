@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/compile-catalog.mjs && vite --host 127.0.0.1",
-    "build": "node scripts/compile-catalog.mjs && tsc --noEmit && vite build",
+    "build": "node scripts/compile-catalog.mjs && tsc --noEmit && vite build && node scripts/stamp-release.mjs",
+    "verify:published": "node scripts/verify-published.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run"
   },

@@ -1,0 +1,123 @@
+{
+  "format": "simpledeepseek.story",
+  "version": 1,
+  "id": "last-train-to-summer",
+  "title": "Последний поезд к лету",
+  "revision": 1,
+  "modules": [
+    {
+      "id": "last-train-to-summer-prompt",
+      "kind": "prompt",
+      "title": "Режиссура истории",
+      "file": "modules/prompt.md",
+      "file_sha256": "d563707590ec485a1c8272ecd570e971c8aa862cef2e27904c0d22dda0be3976",
+      "complete": true,
+      "image": null
+    },
+    {
+      "id": "last-train-to-summer-setting",
+      "kind": "setting",
+      "title": "Стеклянный фронт и поезд «Перелёт»",
+      "file": "modules/setting.md",
+      "file_sha256": "d909b0ec6ed9708651688c782c75b39bfca838c06837e67fe7762de39285cd9b",
+      "complete": true,
+      "image": "images/setting.jpg",
+      "image_sha256": "e2eda14d3f4d9c5313099e567e1e1d0215dc1dcac4cc848020f051564491f1a3",
+      "image_width": 1024,
+      "image_height": 683
+    },
+    {
+      "id": "last-train-to-summer-player",
+      "kind": "player",
+      "title": "Ася Рябинина",
+      "file": "modules/player.md",
+      "file_sha256": "049e2a55ac7707d23b65b96a9af81c200567aeb95279a1dc90618ef26a6a6129",
+      "complete": true,
+      "image": "images/player.jpg",
+      "image_sha256": "0ab61dfeca58232b4bbff866803516cbbab3efeb49236544bb67a5521b58a8c1",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "last-train-to-summer-mark",
+      "kind": "lead",
+      "title": "Марк Северин",
+      "file": "modules/mark.md",
+      "file_sha256": "8c7e91f1adf87bd77a11f6cf83be2078f6240c594a90f3a3a1b35ecded14df62",
+      "complete": true,
+      "image": "images/mark.jpg",
+      "image_sha256": "e14b3817c5d189d84282809c249464b48b55224d34c98715d90b06067156f90c",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "last-train-to-summer-roza",
+      "kind": "support",
+      "title": "Роза Данич",
+      "file": "modules/roza.md",
+      "file_sha256": "d4a2ca6f1c19b0ad816ae64b669bd2663764d35deff755975db4b7920cb850f3",
+      "complete": true,
+      "image": "images/roza.jpg",
+      "image_sha256": "c30ff3820efa6d23da9ce8cc514f245164372b22c453e0e4a9f15fb9b1ecc6c7",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "last-train-to-summer-vesta",
+      "kind": "support",
+      "title": "Веста Климова",
+      "file": "modules/vesta.md",
+      "file_sha256": "101190cb6c8683c8f70aafff22c1aef45a2d36daeec2a03f9842d0a14d82b658",
+      "complete": true,
+      "image": "images/vesta.jpg",
+      "image_sha256": "22e96f40ba9f09ecd299b58db7a383978da8a407c49ddf14893e323b545e62e5",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "last-train-to-summer-amir",
+      "kind": "support",
+      "title": "Амир Саади",
+      "file": "modules/amir.md",
+      "file_sha256": "0251c5fd386e3b763fb9127bb2660d34b3856e5f060e2ac1b8ef72998805e18c",
+      "complete": true,
+      "image": "images/amir.jpg",
+      "image_sha256": "c8b684885c3b41eb62123211f3ba2e5cd9d2ed5869ebf5e5fa9cf3fcb2e3577f",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "last-train-to-summer-nika",
+      "kind": "support",
+      "title": "Ника Ланская",
+      "file": "modules/nika.md",
+      "file_sha256": "53391f47a57baa241aaf20495d32523f2ca5cb2490cad6eb22fb5318c416b9c0",
+      "complete": true,
+      "image": "images/nika.jpg",
+      "image_sha256": "2382dc747945ee6a8b083b04d44b5c5ec7bab7a64889be8a274f542a70d85107",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "last-train-to-summer-gleb",
+      "kind": "support",
+      "title": "Глеб Яров",
+      "file": "modules/gleb.md",
+      "file_sha256": "a5d4b18ca304251c656c256bf7fa3abf07b6264df3b573f455d5625bc0224a8d",
+      "complete": true,
+      "image": "images/gleb.jpg",
+      "image_sha256": "49fcd2a4bb89de92c1050c0c8c9497a3bc275ec7bb936cdeceb7c1d774448966",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "last-train-to-summer-opening",
+      "kind": "opening",
+      "title": "Место у тёплого окна",
+      "file": "modules/opening.md",
+      "file_sha256": "d0575be3bc6a9952a71b1e51b910225f7d52f5fde4e0c64ddd80d6c4912a882f",
+      "complete": true,
+      "image": null
+    }
+  ]
+}

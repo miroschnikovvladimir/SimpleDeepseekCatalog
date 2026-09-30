@@ -120,9 +120,16 @@ export async function compileCatalog(publicDir) {
   return catalog;
 }
 
+export function browseCatalog(catalog) {
+  return { ...catalog, modules: catalog.modules.map(({ preview_description, description, ...module }) => ({
+    ...module, description: preview_description || description,
+  })) };
+}
+
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const publicDir = resolve('public');
   const catalog = await compileCatalog(publicDir);
   await writeFile(resolve(publicDir, 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n');
+  await writeFile(resolve(publicDir, 'browse.json'), JSON.stringify(browseCatalog(catalog), null, 2) + '\n');
   console.log(`Catalog compiled: ${catalog.stories.length} stories, ${catalog.modules.length} modules`);
 }

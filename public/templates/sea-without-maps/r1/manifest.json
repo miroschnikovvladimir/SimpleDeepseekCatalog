@@ -1,0 +1,123 @@
+{
+  "format": "simpledeepseek.story",
+  "version": 1,
+  "id": "sea-without-maps",
+  "title": "Море, которого нет на картах",
+  "revision": 1,
+  "modules": [
+    {
+      "id": "sea-without-maps-prompt",
+      "kind": "prompt",
+      "title": "Режиссура истории",
+      "file": "modules/prompt.md",
+      "file_sha256": "8fa04cc39eea13e6627d165ac77b0cbdff599bb314c75b409cf88b9a12df34ad",
+      "complete": true,
+      "image": null
+    },
+    {
+      "id": "sea-without-maps-setting",
+      "kind": "setting",
+      "title": "Приливное море и «Встречный ветер»",
+      "file": "modules/setting.md",
+      "file_sha256": "4c839ede1fdffc594fb42bb9001fd15e7d78c8e68b53a6c2bc1c6e0f65dfa416",
+      "complete": true,
+      "image": "images/setting.jpg",
+      "image_sha256": "ee2b3847637fe9ed99c931fbacf5a2d58d3a9335cc9540efbe3c83cb2306c8f6",
+      "image_width": 1024,
+      "image_height": 683
+    },
+    {
+      "id": "sea-without-maps-player",
+      "kind": "player",
+      "title": "Элина Сорель",
+      "file": "modules/player.md",
+      "file_sha256": "17233a4e307e385287cef92e438ad4b15e27326ede1c7aa5c78eab95fc4c9278",
+      "complete": true,
+      "image": "images/player.jpg",
+      "image_sha256": "2e0adb898c1e5d77ac168c1befdc285e5e9278c01208f48d124681d3661d3127",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "sea-without-maps-adrian",
+      "kind": "lead",
+      "title": "Адриан Вейл",
+      "file": "modules/adrian.md",
+      "file_sha256": "0bcdfb62713ad0cdeac229a21a2dbd87da3b00e3742b0ba2e610f42827680084",
+      "complete": true,
+      "image": "images/adrian.jpg",
+      "image_sha256": "1b52cc811212bf5fe5ed65018708a290986ebfc4df4ee4b3fb4daede1b4cee54",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "sea-without-maps-mara",
+      "kind": "support",
+      "title": "Мара Сорель",
+      "file": "modules/mara.md",
+      "file_sha256": "adf6ea890a5c2d45f4e9e06c3cf99e37edab67cb76b3133eaae4adb6494f66ba",
+      "complete": true,
+      "image": "images/mara.jpg",
+      "image_sha256": "6ca1b0f2a108d94fe144e557ba04fca7c11af1412f114659a3ba2c627ebdce25",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "sea-without-maps-teya",
+      "kind": "support",
+      "title": "Тея Раск",
+      "file": "modules/teya.md",
+      "file_sha256": "4151808763ae461cc63d38dcaf5ce57165ac564f1cde02b8f7a0c08462750faa",
+      "complete": true,
+      "image": "images/teya.jpg",
+      "image_sha256": "e7bbfe2008c90a118b56bdbe2ca4cbd734097df8e22569c4fc8ede15160cad21",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "sea-without-maps-jonas",
+      "kind": "support",
+      "title": "Йонас Мир",
+      "file": "modules/jonas.md",
+      "file_sha256": "417f2c99c8f31cd622ba9df22c689565ff78f9f2d1ade06a37a1df61126c55d8",
+      "complete": true,
+      "image": "images/jonas.jpg",
+      "image_sha256": "b9cdbb6a792d00e253ba6de2e223ff44046691bb5b5c09bca954227a4fe4a1ce",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "sea-without-maps-savva",
+      "kind": "support",
+      "title": "Савва Орин",
+      "file": "modules/savva.md",
+      "file_sha256": "efebee5166da691f598f9e7f20452b21aecb71bbee5938bc399a45465d07df4a",
+      "complete": true,
+      "image": "images/savva.jpg",
+      "image_sha256": "8c92a44b7866f3e9c15311895a9b4978d13cffb78c9138e6ee6c6399ed2a5085",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "sea-without-maps-irena",
+      "kind": "support",
+      "title": "Ирена Восс",
+      "file": "modules/irena.md",
+      "file_sha256": "4d5d3bd69b7d7968f3f0eedcfe5ed70168151d89fdafc15eda53ae58b8b274ee",
+      "complete": true,
+      "image": "images/irena.jpg",
+      "image_sha256": "1618f856d776b4aa4f796aaa59ef6eb9bd6c470e4026596bd533611c98d9b5c8",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "sea-without-maps-opening",
+      "kind": "opening",
+      "title": "Письмо, которое опоздало",
+      "file": "modules/opening.md",
+      "file_sha256": "f1e6388338d2dcf6f3a2b1bf91670e9d1f0a4f77ed161c3e5edec9e786a1b9fc",
+      "complete": true,
+      "image": null
+    }
+  ]
+}

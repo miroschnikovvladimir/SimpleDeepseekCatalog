@@ -6,13 +6,14 @@
 - Рабочая папка: `E:\GIT\SimpleDeepseekBot\catalog`.
 - Родительский репозиторий исключает `/catalog/` через `.gitignore`.
 - У каталога своя история Git; это не submodule.
-- GitHub-аккаунт для будущей публикации: `miroschnikovvladimir`.
+- GitHub-аккаунт: `miroschnikovvladimir`.
 - Репозиторий: https://github.com/miroschnikovvladimir/SimpleDeepseekCatalog.
 - SSH origin: `git@github-miroschnikovvladimir:miroschnikovvladimir/SimpleDeepseekCatalog.git`.
 - Адрес сайта: https://miroschnikovvladimir.github.io/SimpleDeepseekCatalog/.
-- Интерфейс: React + TypeScript + Vite, статический `public/catalog.json`.
-- В каталоге опубликована история «Город с обратной стороны»: модульный пакет,
-  шесть стартовых дел, два главных и четыре второстепенных персонажа, девять иллюстраций.
+- Интерфейс: React + TypeScript + Vite. `public/browse.json` для карточек,
+  `public/catalog.json` с полным контрактом импорта для бота.
+- Три истории: «Город с обратной стороны», «Море, которого нет на картах»,
+  «Последний поезд к лету» — модульные пакеты с текстами и иллюстрациями.
 
 Референс: https://github.com/miroschnikovvladimir/Catalog.
 Это существующий каталог другого проекта, а не origin нового каталога.
@@ -20,7 +21,9 @@
 Разбор его устройства и точек интеграции: [REFERENCE.md](REFERENCE.md).
 
 Локальные базы, ключи, присланные изображения и видео бота не являются
-содержимым этого репозитория. Публикация историй будет отдельным явным действием.
+содержимым этого репозитория. Готовая история для каталога включает публикацию
+и проверку публичного сайта, если пользователь явно не попросил черновик.
+Процесс создания и критерии готовности: [STORY_WORKFLOW.md](STORY_WORKFLOW.md).
 
 ## Разработка
 
@@ -34,6 +37,9 @@ npm run dev
 
 `npm run build` создаёт `dist/`. Workflow `.github/workflows/pages.yml`
 проверяет и публикует эту папку при push в `main`; источник Pages — GitHub Actions.
+После deployment workflow проверяет `release.json`, оба индекса, игровые файлы,
+все картинки и файлы приложения по SHA-256. Проверку можно повторить командой
+`npm run verify:published -- --url https://miroschnikovvladimir.github.io/SimpleDeepseekCatalog/`.
 Относительные пути Vite позволяют размещать сайт в подпапке репозитория.
 Cloudflare и API старого проекта не используются. Избранное хранится в браузере.
 
@@ -42,6 +48,9 @@ Cloudflare и API старого проекта не используются. �
 В приватном `.env` бота задать `CATALOG_URL=https://<account>.github.io/<repository>/`.
 После перезапуска доступны `/catalog` и кнопка в меню. Mini App открывается
 через reply-клавиатуру: этот способ поддерживает `Telegram.WebApp.sendData`.
+Клавиатура с каталогом не скрывается автоматически после нажатия. Служебные
+параметры Telegram в якоре адреса не считаются страницей истории. Официальный
+SDK загружается с самого сайта; источник и версия — в `public/vendor/README.md`.
 
 Браузер передаёт только ID истории или набор ID модулей с названием сборки.
 Бот загружает `<CATALOG_URL>/catalog.json`, проверяет выбранные записи и создаёт

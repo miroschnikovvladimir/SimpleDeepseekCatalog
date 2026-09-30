@@ -1,2 +1,3 @@
 # Template hashes identify exact bytes; preserve newlines across Windows and CI.
 public/templates/** -text
+public/vendor/telegram-web-app.js -text

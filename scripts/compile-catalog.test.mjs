@@ -3,7 +3,7 @@ import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
-import { compileCatalog } from './compile-catalog.mjs';
+import { compileCatalog, browseCatalog } from './compile-catalog.mjs';
 import sharp from 'sharp';
 
 const directories = [];
@@ -67,6 +67,9 @@ it('keeps full game text while generating real responsive images and spoiler-fre
   const opening = result.modules.find(m => m.role === 'opening');
   expect(opening.description).toBe('Текст opening');
   expect(opening.preview_description).toBe('Описание без разгадки');
+  expect(browseCatalog(result).modules.find(m => m.role === 'opening').description).toBe('Описание без разгадки');
+  expect(browseCatalog(result).modules.find(m => m.role === 'setting').description).toBe('Текст setting');
+  expect(browseCatalog(result).stories).toEqual(result.stories);
   expect(result.stories[0].cover.variants.map(v => v.width)).toEqual([320,640,768]);
   for (const variant of result.stories[0].cover.variants) {
     const metadata = await sharp(await readFile(join(root, variant.url))).metadata();

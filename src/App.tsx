@@ -2,6 +2,8 @@ import { SubmitStory } from "./SubmitStory";
 import { useEffect, useState } from "react";
 import { catalogSchema, FAVORITES_KEY, importPayload, labels, readFavorites } from "./catalog";
 import type { Catalog, Story, StoryModule } from "./catalog";
+import { routeFromHash } from "./routing";
+import { bindTelegramReady } from "./telegram";
 
 function Empty({ title, children }: { title: string; children: React.ReactNode }) {
   return <section className="empty"><span className="empty-mark" aria-hidden="true">✧</span><h2>{title}</h2><p>{children}</p></section>;
@@ -10,7 +12,7 @@ function Empty({ title, children }: { title: string; children: React.ReactNode }
 export function App() {
   const [data, setData] = useState<Catalog | null>(null);
   const [error, setError] = useState("");
-  const [route, setRoute] = useState(location.hash.slice(2) || "catalog");
+  const [route, setRoute] = useState(() => routeFromHash(location.hash));
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("");
   const [favorites, setFavorites] = useState(readFavorites);
@@ -18,16 +20,17 @@ export function App() {
   const [opened, setOpened] = useState<StoryModule | null>(null);
   const [selection, setSelection] = useState({ title: "", setting_id: "", plot_id: "", character_ids: [] as string[] });
   useEffect(() => {
-    const change = () => { setRoute(location.hash.slice(2) || "catalog"); setOpened(null); setNotice(""); };
+    const change = () => { setRoute(routeFromHash(location.hash)); setOpened(null); setNotice(""); };
     window.addEventListener("hashchange", change);
     window.addEventListener("popstate", change);
     const abort = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}catalog.json`, { signal: abort.signal, cache: "no-cache" })
+    fetch(`${import.meta.env.BASE_URL}browse.json`, { signal: abort.signal, cache: "no-cache" })
       .then(response => { if (!response.ok) throw new Error(); return response.json(); })
       .then(value => setData(catalogSchema.parse(value)))
       .catch(() => { if (!abort.signal.aborted) setError("Не удалось загрузить каталог. Попробуй обновить страницу."); });
     return () => { abort.abort(); window.removeEventListener("hashchange", change); window.removeEventListener("popstate", change); };
   }, []);
+  useEffect(() => bindTelegramReady(document.getElementById("telegram-sdk")), []);
   useEffect(() => {
     if (!opened) return;
     const escape = (event: KeyboardEvent) => { if (event.key === "Escape") setOpened(null); };
@@ -66,7 +69,7 @@ export function App() {
     if (!link) return;
     event.preventDefault();
     history.pushState(null, "", link.hash);
-    setRoute(link.hash.slice(2) || "catalog"); setOpened(null); setNotice("");
+    setRoute(routeFromHash(link.hash)); setOpened(null); setNotice("");
   }}>
     <header className="topbar"><a className="brand" href="#/catalog">Истории<span> ✧</span></a><nav aria-label="Каталог"><a href="#/catalog" aria-current={route === "catalog" ? "page" : undefined}>Каталог</a><a href="#/favorites" aria-current={route === "favorites" ? "page" : undefined}>Сохранённое</a><a href="#/builder" aria-current={route === "builder" ? "page" : undefined}>Конструктор</a><a href="#/authors" aria-current={route === "authors" ? "page" : undefined}>Авторам</a></nav></header>
     {notice && <p className="notice" role="status">{notice}</p>}
