@@ -47,7 +47,11 @@ it('compiles two-module quick packages with mandatory portraits and age ratings'
   expect(result.stories[0]).toMatchObject({mode:'quick',adult:true,prompt_id:'prompt',lead_id:'lead',character_ids:['lead']});
   expect(result.modules.map(m=>m.role)).toEqual(['prompt','lead']);
   expect(result.stories[0]).not.toHaveProperty('setting_id');
-  manifest.adult='true';await save();
+  for (const adult of ['true',null,0]) {
+    manifest.adult=adult;await save();
+    await expect(compileCatalog(root)).rejects.toThrow('age rating');
+  }
+  manifest.adult=false;manifest.mode=null;await save();
   await expect(compileCatalog(root)).rejects.toThrow('age rating');
 });
 it('rejects altered module bytes', async () => {

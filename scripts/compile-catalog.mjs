@@ -57,7 +57,8 @@ export async function compileCatalog(publicDir) {
     if (manifest.format !== 'simpledeepseek.story' || manifest.version !== 1 || !Number.isSafeInteger(manifest.revision) || manifest.revision < 0 || !title(manifest.title)) fail('Invalid manifest');
     if (manifestPath !== `templates/${manifest.id}/r${manifest.revision}/manifest.json`) fail('Template revision does not match directory');
     const modules = manifest.modules;
-    const mode = manifest.mode ?? 'story', adult = manifest.adult ?? false;
+    const mode = manifest.mode === undefined ? 'story' : manifest.mode;
+    const adult = manifest.adult === undefined ? false : manifest.adult;
     if (!['story', 'quick'].includes(mode) || typeof adult !== 'boolean') fail('Invalid mode or age rating');
     const roles = mode === 'quick' ? ['prompt', 'lead'] : required;
     if (!Array.isArray(modules) || (mode === 'quick' ? modules.length !== 2 : modules.length < 5 || modules.length > 23) || roles.some(k => modules.filter(m => m.kind === k).length !== 1)) fail('Invalid module roles');
