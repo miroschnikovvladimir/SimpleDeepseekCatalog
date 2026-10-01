@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { catalogSchema, importPayload } from "./catalog";
+import { catalogSchema, importPayload, visibleStories } from "./catalog";
 import emptyCatalog from "../public/catalog.json";
 
 const fixture = () => catalogSchema.parse({
@@ -9,6 +9,18 @@ const fixture = () => catalogSchema.parse({
 });
 
 describe("published catalog contract", () => {
+  it("validates quick packages and filters adults in each section", () => {
+    const raw = fixture();
+    raw.modules.push({id:"qp",type:"plot",role:"prompt",mode:"quick",adult:true,title:"Начало",summary:"",description:"Текст",image:null,tags:[],author:{name:"Автор"}});
+    raw.modules.push({...raw.modules[2],id:"ql",role:"lead",mode:"quick",adult:true});
+    const quick = {id:"quick",title:"Quick",mode:"quick",adult:true,prompt_id:"qp",lead_id:"ql",character_ids:["ql"],template:{manifest:"templates/quick/r1/manifest.json",sha256:"a".repeat(64)}};
+    const data=catalogSchema.parse({...raw,stories:[...raw.stories,quick]});
+    expect(visibleStories(data,"quick",false)).toHaveLength(0);
+    expect(visibleStories(data,"quick",true)).toHaveLength(1);
+    expect(visibleStories(data,"story",true)).toHaveLength(1);
+    expect(importPayload(data,{story_id:"quick"})).toEqual({action:"catalog_import",version:1,story_id:"quick"});
+    expect(catalogSchema.safeParse({...data,stories:[{...quick,lead_id:"qp"}]}).success).toBe(false);
+  });
   it("validates the generated catalog index", () => {
     expect(catalogSchema.safeParse(emptyCatalog).success).toBe(true);
   });

@@ -1,0 +1,13 @@
+{
+  "tool": "image_gen built-in",
+  "images": [
+    {
+      "id": "quick-mira",
+      "prompt": "Use case: illustration-story. Original adult fictional character portrait for a mobile story catalog. Premium restrained semi-realistic illustration with clean readable silhouette and clear balanced composition. Extremely low artificial high-frequency detail: large smooth planes, broad soft lighting, simple quiet background, absolutely no Perlin-like texture, no grain, no noise, no ornamental clutter, no HDR or sharpening halos. Natural adult proportions and attractive expressive face, fully clothed, no text or watermark. Vertical 2:3 waist-up with generous head room for responsive cropping. Mira, 32-year-old woman who runs a little bookshop near a sleepy seaside railway station. Short dark auburn bob, warm brown eyes, bright playful half-smile, sage-green cardigan over cream blouse, one simple closed book held at her side. Warm ivory and sage palette, a blurred tall window with soft dusk beyond, only a few broad shapes suggesting shelves. Character is focused and curious, an inviting cozy mystery atmosphere."
+    },
+    {
+      "id": "quick-roman",
+      "prompt": "Use case: illustration-story. Original adult fictional character portrait for a mobile story catalog. Premium restrained semi-realistic illustration with clean readable silhouette and clear balanced composition. Extremely low artificial high-frequency detail: large smooth planes, broad soft lighting, simple quiet background, absolutely no Perlin-like texture, no grain, no noise, no ornamental clutter, no HDR or sharpening halos. Natural adult proportions and attractive expressive face, fully clothed, no text or watermark. Vertical 2:3 waist-up with generous head room for responsive cropping. Roman, 35-year-old male pianist at an intimate seaside hotel during a storm. Dark neatly tousled hair, hazel eyes, light stubble, relaxed thoughtful warm smile, navy linen shirt with sleeves casually rolled, ordinary elegant wristwatch. Soft muted blue and amber lighting, very simple blurred piano silhouette and rain window behind him. Charismatic grounded human, restrained adult romantic atmosphere, confident without aggression, fully clothed."
+    }
+  ]
+}

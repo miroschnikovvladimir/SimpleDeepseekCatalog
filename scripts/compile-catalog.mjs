@@ -10,6 +10,7 @@ const text = (value, limit) => typeof value === 'string' && value.trim().length 
 const title = value => text(value, 80) && !/[\r\n]/.test(value);
 const kinds = ['prompt', 'setting', 'player', 'lead', 'support', 'opening'];
 const required = kinds.filter(kind => kind !== 'support');
+const roleLabels = {prompt:'Исходный промпт',setting:'Сеттинг',player:'Альтер-эго игрока',lead:'Второй главный герой',support:'Второстепенный персонаж',opening:'Стартовый сюжет'};
 function fail(message) { throw new Error(message); }
 function safePath(value) {
   if (typeof value !== 'string' || value.length > 200 || !/^(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9_.-]+$/.test(value) || value.split('/').some(p => p === '.' || p === '..')) fail('Unsafe template path');
@@ -56,13 +57,17 @@ export async function compileCatalog(publicDir) {
     if (manifest.format !== 'simpledeepseek.story' || manifest.version !== 1 || !Number.isSafeInteger(manifest.revision) || manifest.revision < 0 || !title(manifest.title)) fail('Invalid manifest');
     if (manifestPath !== `templates/${manifest.id}/r${manifest.revision}/manifest.json`) fail('Template revision does not match directory');
     const modules = manifest.modules;
-    if (!Array.isArray(modules) || modules.length < 5 || modules.length > 23 || required.some(k => modules.filter(m => m.kind === k).length !== 1)) fail('Invalid module roles');
+    const mode = manifest.mode ?? 'story', adult = manifest.adult ?? false;
+    if (!['story', 'quick'].includes(mode) || typeof adult !== 'boolean') fail('Invalid mode or age rating');
+    const roles = mode === 'quick' ? ['prompt', 'lead'] : required;
+    if (!Array.isArray(modules) || (mode === 'quick' ? modules.length !== 2 : modules.length < 5 || modules.length > 23) || roles.some(k => modules.filter(m => m.kind === k).length !== 1)) fail('Invalid module roles');
+    if (mode === 'quick' && !modules.find(m => m.kind === 'lead').image) fail('Quick start requires a portrait');
     const characters = modules.filter(m => ['player', 'lead', 'support'].includes(m.kind));
     if (characters.length > 20 || new Set(characters.map(m => m.title.toLocaleLowerCase('ru'))).size !== characters.length) fail('Invalid characters');
     const paths = new Set(), indexed = [], base = dirname(resolve(publicDir, manifestPath));
     const presentation = entry.presentation || {};
     if (typeof presentation !== 'object' || Array.isArray(presentation) ||
-        (presentation.modules != null && (typeof presentation.modules !== 'object' || Array.isArray(presentation.modules) || Object.keys(presentation.modules).some(key => !modules.some(m => m.id === key && m.kind !== 'prompt'))))) fail('Invalid presentation metadata');
+        (presentation.modules != null && (typeof presentation.modules !== 'object' || Array.isArray(presentation.modules) || Object.keys(presentation.modules).some(key => !modules.some(m => m.id === key && (mode === 'quick' || m.kind !== 'prompt')))))) fail('Invalid presentation metadata');
     let total = 0;
     for (const m of modules) {
       useId(m.id);
@@ -79,6 +84,7 @@ export async function compileCatalog(publicDir) {
       const body = new TextDecoder('utf-8', { fatal: true }).decode(content);
       if (!text(body, 12000)) fail('Invalid module text');
       total += [...body].length;
+      total += [...m.title].length + [...roleLabels[m.kind]].length + 3;
       let image = null;
       const preview = presentation.modules?.[m.id];
       if (preview != null && (typeof preview !== 'object' || Array.isArray(preview) || !text(preview.summary, 1000) || !text(preview.description, 6000))) fail('Invalid module preview');
@@ -96,21 +102,22 @@ export async function compileCatalog(publicDir) {
         if (m.kind !== 'opening' || !path.startsWith(manifestPath.replace('manifest.json', 'images/')) || !path.endsWith('.jpg')) fail('Invalid preview image path');
         image = await webImage(publicDir, path, await localFile(publicDir, path, 2 * 1024 * 1024), m.title);
       }
-      if (m.kind !== 'prompt') indexed.push({ id: m.id, type: m.kind === 'setting' ? 'setting' : m.kind === 'opening' ? 'plot' : 'character',
-        role: m.kind, title: m.title, summary: preview?.summary || body.slice(0, 220), description: body,
+      if (m.kind !== 'prompt' || mode === 'quick') indexed.push({ id: m.id, type: m.kind === 'setting' ? 'setting' : ['opening','prompt'].includes(m.kind) ? 'plot' : 'character',
+        role: m.kind, adult, mode, title: m.title, summary: preview?.summary || body.slice(0, 220), description: body,
         ...(preview ? { preview_description: preview.description } : {}), image, tags: [], author: entry.author || { name: 'Редакция' } });
     }
+    total += (modules.length - 1) * 2 + '\n\nИгрок управляет только своим альтер-эго. Не решай за него, не пиши его мысли, действия и реплики.'.length;
     if (total > 60000) fail('Story text too large');
-    const setting = indexed.find(m => m.role === 'setting');
+    const setting = indexed.find(m => m.role === (mode === 'quick' ? 'lead' : 'setting'));
     let cover = setting.image;
     if (presentation.cover != null) {
       const path = safePath(presentation.cover);
       if (!path.startsWith(manifestPath.replace('manifest.json', 'images/')) || !path.endsWith('.jpg')) fail('Invalid cover path');
       cover = await webImage(publicDir, path, await localFile(publicDir, path, 2 * 1024 * 1024), manifest.title);
     }
-    catalog.stories.push({ id: manifest.id, title: manifest.title, summary: entry.summary || '',
+    catalog.stories.push({ id: manifest.id, title: manifest.title, mode, adult, summary: entry.summary || '',
       cover, categories: entry.categories || [], tags: entry.tags || [], author: entry.author || { name: 'Редакция' },
-      setting_id: setting.id, plot_id: indexed.find(m => m.role === 'opening').id, character_ids: characters.map(m => m.id),
+      ...(mode === 'quick' ? {prompt_id: indexed.find(m => m.role === 'prompt').id, lead_id: setting.id} : {setting_id: setting.id, plot_id: indexed.find(m => m.role === 'opening').id}), character_ids: characters.map(m => m.id),
       template: { manifest: manifestPath, sha256: hash(raw) } });
     catalog.modules.push(...indexed);
   }

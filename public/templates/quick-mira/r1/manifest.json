@@ -1,0 +1,32 @@
+{
+  "format": "simpledeepseek.story",
+  "version": 1,
+  "id": "quick-mira",
+  "title": "Мира · Лавка между поездами",
+  "revision": 1,
+  "mode": "quick",
+  "adult": false,
+  "modules": [
+    {
+      "id": "quick-mira-prompt",
+      "kind": "prompt",
+      "title": "Стартовый промпт",
+      "file": "modules/prompt.md",
+      "file_sha256": "5f407338d5237e3e631f54e70095a08c97cea721b6f26105b0c5a523a2e93b2e",
+      "complete": true,
+      "image": null
+    },
+    {
+      "id": "quick-mira-character",
+      "kind": "lead",
+      "title": "Мира Лаврова",
+      "file": "modules/character.md",
+      "file_sha256": "1e404aefe4ef76ee9826887b05fe889b43b60e37e67b7a40031de9b0e9d5fefd",
+      "complete": true,
+      "image": "images/character.jpg",
+      "image_sha256": "3407166c0c995e71caf17aa6573af1bffd44895e7823cdd57717222e6c30de39",
+      "image_width": 683,
+      "image_height": 1024
+    }
+  ]
+}

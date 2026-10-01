@@ -32,6 +32,24 @@ it('compiles loose Markdown files into cards with a hashed package reference', a
   expect(catalog.modules.map(m => m.role)).toEqual(['setting', 'player', 'lead', 'opening']);
   expect(catalog.modules[0].description).toBe('Текст setting');
 });
+
+it('compiles two-module quick packages with mandatory portraits and age ratings', async () => {
+  const {root,dir,manifest,save}=await fixture();
+  manifest.mode='quick'; manifest.adult=true;
+  manifest.modules=manifest.modules.filter(m=>['prompt','lead'].includes(m.kind));
+  await save();
+  await expect(compileCatalog(root)).rejects.toThrow('portrait');
+  const bytes=await sharp({create:{width:320,height:480,channels:3,background:'#324'}}).jpeg().toBuffer();
+  await writeFile(join(dir,'lead.jpg'),bytes);
+  Object.assign(manifest.modules[1],{image:'lead.jpg',image_sha256:hash(bytes),image_width:320,image_height:480});
+  await save();
+  const result=await compileCatalog(root);
+  expect(result.stories[0]).toMatchObject({mode:'quick',adult:true,prompt_id:'prompt',lead_id:'lead',character_ids:['lead']});
+  expect(result.modules.map(m=>m.role)).toEqual(['prompt','lead']);
+  expect(result.stories[0]).not.toHaveProperty('setting_id');
+  manifest.adult='true';await save();
+  await expect(compileCatalog(root)).rejects.toThrow('age rating');
+});
 it('rejects altered module bytes', async () => {
   const { root, dir } = await fixture();
   await writeFile(join(dir, 'player.md'), 'tampered');

@@ -1,8 +1,26 @@
 import { describe, expect, it } from "vitest";
-import { draftSchema, newDraft, newModule, payload } from "./submission";
+import { draftSchema, newDraft, newModule, payload, switchMode } from "./submission";
 
 function ready() { const d = newDraft(); d.title = "История"; d.alias = "Автор"; d.summary = "Аннотация"; d.modules.forEach(m => { m.title = m.kind; m.body = "Текст"; }); return d; }
 describe("submission form", () => {
+  it("requires only two quick modules, a portrait and preserves the rating", () => {
+    const d = newDraft("quick"); Object.assign(d, {title:"Квики",alias:"Автор",summary:"Описание",adult:true});
+    d.modules.forEach(m => {m.title=m.kind;m.body="Текст";});
+    expect(() => payload(d)).toThrow("портрет");
+    d.modules[1].image="YWJj";
+    expect(payload(d)).toMatchObject({mode:"quick",adult:true});
+    expect(payload(d).modules).toHaveLength(2);
+    expect(payload(d)).not.toHaveProperty("inactiveModules");
+  });
+  it("preserves inactive story modules when switching formats and restores old drafts", () => {
+    const story = ready();
+    const quick = switchMode(story,"quick");
+    expect(quick.modules.map(m => m.kind)).toEqual(["prompt","lead"]);
+    const restored = switchMode(quick,"story");
+    expect(restored.modules).toEqual(story.modules);
+    const {mode,adult,...old} = story;
+    expect(draftSchema.parse(old)).toMatchObject({mode:"story",adult:false});
+  });
   it("requires complete modules and unique character names", () => {
     expect(() => payload(newDraft())).toThrow();
     const d = ready(); expect(payload(d).modules).toHaveLength(5);

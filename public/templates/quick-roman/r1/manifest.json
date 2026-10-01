@@ -1,0 +1,32 @@
+{
+  "format": "simpledeepseek.story",
+  "version": 1,
+  "id": "quick-roman",
+  "title": "Роман · Музыка перед грозой",
+  "revision": 1,
+  "mode": "quick",
+  "adult": true,
+  "modules": [
+    {
+      "id": "quick-roman-prompt",
+      "kind": "prompt",
+      "title": "Стартовый промпт",
+      "file": "modules/prompt.md",
+      "file_sha256": "16440f2a49ec2e450c0974489a863d9b3326324b7d0b772a96813c1ab2f7f909",
+      "complete": true,
+      "image": null
+    },
+    {
+      "id": "quick-roman-character",
+      "kind": "lead",
+      "title": "Роман Ветров",
+      "file": "modules/character.md",
+      "file_sha256": "bd1bcd54a765cca525a6e1c35884fea904a8ba4696ddaa6fac1f1e881fe4de00",
+      "complete": true,
+      "image": "images/character.jpg",
+      "image_sha256": "283e95f7308f38b5d363928a683a7615db4d5326a78cb9374a79d5fc1c481ca2",
+      "image_width": 683,
+      "image_height": 1024
+    }
+  ]
+}

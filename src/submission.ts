@@ -4,19 +4,34 @@ export const roles = { prompt: "Исходный промпт", setting: "Сет
 export type Kind = keyof typeof roles;
 export const required: Kind[] = ["prompt", "setting", "player", "lead", "opening"];
 const line = z.string().trim().min(1, "Заполни название или имя").max(80).refine(s => !/[\r\n\0]/.test(s), "Нужна одна строка");
+const draftModule = z.object({ id: z.string().uuid(), kind: z.enum(["prompt", "setting", "player", "lead", "support", "opening"]), title: z.string().max(80), body: z.string().max(12000), image: z.string().max(3 * 1024 * 1024).regex(/^[A-Za-z0-9+/]*={0,2}$/).nullable() });
 export const draftSchema = z.object({
   requestId: z.string().uuid(), title: z.string().max(80), alias: z.string().max(80), summary: z.string().max(1000),
-  modules: z.array(z.object({ id: z.string().uuid(), kind: z.enum(["prompt", "setting", "player", "lead", "support", "opening"]), title: z.string().max(80), body: z.string().max(12000), image: z.string().max(3 * 1024 * 1024).regex(/^[A-Za-z0-9+/]*={0,2}$/).nullable() })).min(5).max(23),
+  mode: z.enum(["story", "quick"]).default("story"), adult: z.boolean().default(false),
+  modules: z.array(draftModule).min(2).max(23),
+  inactiveModules: z.array(draftModule).max(23).optional(),
   receipt: z.number().int().positive().optional(),
 });
 export type Draft = z.infer<typeof draftSchema>;
 export function newModule(kind: Kind) { return { id: crypto.randomUUID(), kind, title: ["player", "lead", "support"].includes(kind) ? "" : roles[kind], body: "", image: null as string | null }; }
-export function newDraft(): Draft { return { requestId: crypto.randomUUID(), title: "", alias: "", summary: "", modules: required.map(newModule) }; }
+export function newDraft(mode: Draft["mode"] = "story"): Draft { return { requestId: crypto.randomUUID(), title: "", alias: "", summary: "", mode, adult: false, modules: (mode === "quick" ? ["prompt", "lead"] as Kind[] : required).map(newModule) }; }
+export function switchMode(draft: Draft, mode: Draft["mode"]): Draft {
+  if (draft.mode === mode) return draft;
+  const all = [...draft.modules, ...(draft.inactiveModules || [])];
+  const kinds = mode === "quick" ? ["prompt", "lead"] as Kind[] : required;
+  const modules = kinds.map(kind => all.find(m => m.kind === kind) || newModule(kind));
+  if (mode === "story") modules.splice(modules.length - 1, 0, ...all.filter(m => m.kind === "support"));
+  return {...draft, mode, modules, inactiveModules: all.filter(m => !modules.some(active => active.id === m.id)), requestId: crypto.randomUUID(), receipt: undefined};
+}
 export function payload(draft: Draft) {
+  draft = draftSchema.parse(draft);
   const title = line.parse(draft.title), alias = line.parse(draft.alias);
   const summary = z.string().trim().min(1, "Добавь аннотацию").max(1000).parse(draft.summary);
   const names = new Set<string>();
-  for (const kind of required) if (draft.modules.filter(m => m.kind === kind).length !== 1) throw new Error("Нужен один модуль каждой основной роли.");
+  const kinds = draft.mode === "quick" ? ["prompt", "lead"] as Kind[] : required;
+  if (draft.mode === "quick" && draft.modules.length !== 2) throw new Error("В квики только промпт и один персонаж.");
+  for (const kind of kinds) if (draft.modules.filter(m => m.kind === kind).length !== 1) throw new Error("Нужен один модуль каждой основной роли.");
+  if (draft.mode === "quick" && !draft.modules.find(m => m.kind === "lead")?.image) throw new Error("Добавь портрет персонажа для квики.");
   for (const m of draft.modules) {
     line.parse(m.title);
     if (!m.body.trim() || m.body.includes("\0")) throw new Error(`Заполни: ${roles[m.kind]}.`);
@@ -27,7 +42,7 @@ export function payload(draft: Draft) {
     }
   }
   if (draft.modules.reduce((n, m) => n + [...m.body].length, 0) > 60000) throw new Error("Сократи историю до 60 000 символов.");
-  return { title, alias, summary, consent: true, modules: draft.modules.map(({ kind, title, body, image }) => ({ kind, title: title.trim(), body: body.trim(), image })) };
+  return { title, alias, summary, mode: draft.mode, adult: draft.adult, consent: true, modules: draft.modules.map(({ kind, title, body, image }) => ({ kind, title: title.trim(), body: body.trim(), image })) };
 }
 
 // Images and text are local until the explicit submission, including across reloads.

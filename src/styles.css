@@ -14,6 +14,17 @@
   --line: color-mix(in srgb, var(--muted) 24%, transparent);
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark; --bg: #16111f; --panel: #241b30; --panel-raised: #30223f;
+  --text: #f7f0ff; --muted: #b8a9c7; --accent: #e8698e; --accent-text: #fff;
+  --gold: #ffc96b; color: var(--text); background: var(--bg);
+}
+:root[data-theme="light"] {
+  color-scheme: light; --bg: #faf7f3; --panel: #fffdfb; --panel-raised: #eee6ef;
+  --text: #292031; --muted: #695d75; --accent: #a62b58; --accent-text: #fff;
+  --gold: #855100; color: var(--text); background: var(--bg);
+}
+
 * { box-sizing: border-box; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
 .topbar nav a[aria-current="page"] { color: var(--accent); }
@@ -230,4 +241,42 @@ h2 { letter-spacing: -.025em; }
   .form-columns { grid-template-columns: 1fr; }
   .submit-actions > .primary-action { width: 100%; }
   .submission-form legend { font-size: 16px; }
+}
+
+.app-controls { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.theme-toggle { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--text); background: var(--panel); font-size: 24px; }
+.switch-control { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; font-size: 12px; font-weight: 700; }
+.switch-control input { appearance: none; position: relative; width: 38px; height: 24px; margin: 0; border-radius: 999px; background: var(--muted); flex-shrink: 0; cursor: pointer; }
+.switch-control input::after { content: ""; position: absolute; width: 18px; height: 18px; top: 3px; left: 3px; border-radius: 50%; background: #fff; }
+.switch-control input:checked { background: var(--accent); }
+.switch-control input:checked::after { left: 17px; }
+.rating-badge { position: absolute; left: 12px; top: 12px; border-radius: 8px; padding: 6px 9px; color: #fff; background: #552043; font-size: 12px; font-weight: 800; }
+.build-badge { position: fixed; z-index: 30; right: max(12px, env(safe-area-inset-right)); bottom: max(8px, env(safe-area-inset-bottom)); padding: 5px 9px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--muted); font: 11px ui-monospace, SFMono-Regular, Consolas, monospace; }
+.build-badge a { text-decoration: none; }
+.app-shell { padding-bottom: max(52px, env(safe-area-inset-bottom)); }
+.quick-intro { max-width: 450px; color: var(--muted); line-height: 1.6; }
+:root[data-theme="light"] body { background: radial-gradient(circle at 90% -10%, #ede0ec, transparent 34rem), var(--bg); }
+:root[data-theme="light"] .heart { color: var(--text); background: #ffffffeb; border-color: var(--line); box-shadow: 0 4px 14px #29203112; }
+:root[data-theme="light"] .heart.is-active { background: var(--accent); color: #fff; }
+:root[data-theme="light"] .cover-card, :root[data-theme="light"] .story-cover { box-shadow: 0 12px 30px #29203120; }
+:root[data-theme="light"] .module-image, :root[data-theme="light"] .dialog-image { background: #e8e2e8; }
+:root[data-theme="light"] .form-error { color: #9b1640; border-color: #9b164044; }
+:root[data-theme="light"] .dialog-close { color: #fff; }
+.format-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.format-options label { padding: 16px; border: 1px solid var(--line); border-radius: 12px; }
+.format-options label:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.format-options input { width: 18px !important; min-height: 18px !important; accent-color: var(--accent); }
+.submission-form .switch-control { display: flex; align-items: center; }
+.submission-form .switch-control input { width: 38px; min-height: 24px; height: 24px; padding: 0; border: 0; }
+@media (max-width: 1100px) {
+  .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; }
+  .topbar nav { grid-column: 1 / -1; grid-row: 2; width: 100%; min-width: 0; }
+  .topbar nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .app-controls { grid-column: 2; grid-row: 1; gap: 8px; }
+}
+@media (max-width: 380px) {
+  .topbar { padding-left: 12px; padding-right: 12px; }
+  .brand { font-size: 18px; }
+  .switch-control { font-size: 11px; gap: 6px; }
+  .format-options { grid-template-columns: 1fr; }
 }
