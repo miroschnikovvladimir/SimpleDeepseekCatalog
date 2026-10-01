@@ -170,6 +170,64 @@
         "manifest": "templates/last-train-to-summer/r1/manifest.json",
         "sha256": "84c860c5b6c04371777c0a828cde21ef1ca96a3354b83d10de4522dc8dbc8832"
       }
+    },
+    {
+      "id": "impossible-delivery",
+      "title": "Служба доставки невозможного",
+      "summary": "В курьерском бюро Ладина доставляют дождь, семейные вечера и целые комнаты. Пройди невозможные маршруты с обаятельным напарником, разберись в возвращающихся посылках и найди своё место — в городе, в работе и рядом с ним.",
+      "cover": {
+        "thumbnail": "templates/impossible-delivery/r1/images/cover-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/cover-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Служба доставки невозможного",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/cover-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/cover-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/cover-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "categories": [
+        "Приключение",
+        "Городское фэнтези"
+      ],
+      "tags": [
+        "Курьеры",
+        "Невозможные адреса",
+        "Медленный роман",
+        "Тёплое фэнтези",
+        "Юмор",
+        "Команда",
+        "Город",
+        "Магические посылки"
+      ],
+      "author": {
+        "name": "Администрация"
+      },
+      "setting_id": "impossible-delivery-setting",
+      "plot_id": "impossible-delivery-opening",
+      "character_ids": [
+        "impossible-delivery-player",
+        "impossible-delivery-lev",
+        "impossible-delivery-tamara",
+        "impossible-delivery-miron",
+        "impossible-delivery-agata",
+        "impossible-delivery-ida",
+        "impossible-delivery-emil"
+      ],
+      "template": {
+        "manifest": "templates/impossible-delivery/r1/manifest.json",
+        "sha256": "42de3044d0b64415501b7182d24c9c75152017449d0f0000d77cc6a60b39129b"
+      }
     }
   ],
   "modules": [
@@ -1030,6 +1088,303 @@
         "name": "Администрация"
       },
       "description": "На боковой платформе Кромы готовят последний доступный рейс перед закрытием перевала. За обледенелым стеклом тепличного вагона видны зелёные листья; из кухни доносится обычный спор о кружках.\n\nМарк предлагает помочь с погрузкой. Роза ждёт специалистку, Веста проверяет состав, а впереди лежит дорога к побережью, с которым давно нет надёжной связи.\n\nВосемь частей стартовой экспедиции: станции, повреждённый мост, Стеклянный лес, южные тропы и выбор будущего. После завершения доступны новые рейсы и жизнь между ними.\n\n«Играть» в каталоге, открытом через бота, создаст твою отдельную личную копию истории."
+    },
+    {
+      "id": "impossible-delivery-setting",
+      "type": "setting",
+      "role": "setting",
+      "title": "Ладин и Служба доставки невозможного",
+      "summary": "Город с дверями между этажами, маленькое курьерское бюро и посылки, которые не принимает обычная почта.",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/setting-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/setting-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Ладин и Служба доставки невозможного",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/setting-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/setting-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/setting-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "В Ладине можно доставить дождь в закрытую мастерскую, сохранённый вечер — к семейному столу, а небольшую комнату — по новому адресу. Для этого нужны наблюдение, проверенный маршрут и умение разговаривать с людьми.\n\nСлужба на Медной набережной станет постоянным местом встреч: чай после смены, карты на большом столе, мокрые сумки у двери и коллеги с собственными планами. Между заказами остаётся место обычной городской жизни.\n\nТёплое городское фэнтези с юмором, необычными переходами и приключением, которое складывается из конкретных человеческих историй."
+    },
+    {
+      "id": "impossible-delivery-player",
+      "type": "character",
+      "role": "player",
+      "title": "Вера Мельникова",
+      "summary": "Вера Мельникова, 30 лет. Бывшая диспетчерка приходит на пробную смену и получает адрес: «верхняя мастерская, вход по дождю».",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/player-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/player-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Вера Мельникова",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/player-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/player-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/player-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Вера умеет проверить условия, заметить несовпадение в двух листах и спросить человека, что ему действительно нужно. В новой профессии эти навыки окажутся полезнее, чем желание смело прыгнуть в любую светящуюся дверь.\n\nОплаченная пробная неделя даст время узнать город, команду и собственные возможности. Имя, внешность и детали биографии можно согласовать перед началом.\n\nЕё профессиональный путь, чувства и отношения выбирает игрок. Роман не является условием работы и доступа к приключениям."
+    },
+    {
+      "id": "impossible-delivery-lev",
+      "type": "character",
+      "role": "lead",
+      "title": "Лев Арден",
+      "summary": "Лев Арден, 32 года. Курьер с сухим юмором и привычкой сначала придумать выход за двоих, а потом вспомнить, что у него есть напарница.",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/lev-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/lev-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Лев Арден",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/lev-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/lev-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/lev-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Лев знает невозможные адреса, любит точные шутки и внимательно относится к рабочему риску. С ним можно подняться над каналом, разобраться в странном заказе и посмеяться над вполне обычной неудачей с бутербродами.\n\nПривычка отвечать за всё самому иногда мешает ему услышать коллегу. Совместная работа покажет, способен ли он разделить не только опасность, но и право на решение.\n\nМожет стать любовным интересом, другом или напарником. Медленная близость растёт через добровольное время, уважение, юмор и изменения в поступках."
+    },
+    {
+      "id": "impossible-delivery-tamara",
+      "type": "character",
+      "role": "support",
+      "title": "Тамара Клин",
+      "summary": "Тамара Клин, 54 года. Руководит бюро и умеет вернуть красивый невозможный план к вопросу: «Кто будет на месте, когда мы придём?»",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/tamara-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/tamara-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Тамара Клин",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/tamara-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/tamara-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/tamara-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Тамара знает клиентов, мастеров и цену обещанию, данному без проверки. Обсуждает условия до смены, организует помощь и способна признать ошибку в служебных записях.\n\nХочет, чтобы бюро работало без героизма нескольких незаменимых людей. Может стать наставницей Веры и участницей честного разговора о новой профессии.\n\nОценивает работу отдельно от личных отношений; профессиональная карьера не выдаётся в награду за роман."
+    },
+    {
+      "id": "impossible-delivery-miron",
+      "type": "character",
+      "role": "support",
+      "title": "Мирон Кел",
+      "summary": "Мирон Кел, 24 года. Картограф адресов: ему недостаточно «там увидишь», особенно если видеть предстоит под дождём.",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/miron-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/miron-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Мирон Кел",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/miron-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/miron-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/miron-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Мирон рисует большие понятные листы и сверяет настоящие ориентиры. Карта хранит проверенный маршрут, но не читает мысли получателя и не заменяет разговор с хозяином двери.\n\nМожет помочь сопоставить странные возвраты и найти другой путь. Ему самому пригодятся практические наблюдения героини: красивая схема и удобная доставка не всегда одно и то же.\n\nУ него своя работа, друзья и мечта сделать обучение понятнее. Возможна самостоятельная дружеская линия."
+    },
+    {
+      "id": "impossible-delivery-agata",
+      "type": "character",
+      "role": "support",
+      "title": "Агата Штоль",
+      "summary": "Агата Штоль, 46 лет. Мастерица тары и помещений. Сначала спросит, что переносим и где оно окажется.",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/agata-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/agata-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Агата Штоль",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/agata-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/agata-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/agata-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Агата работает с погодными полотнами, пространственными печатями и складированными комнатами. Умеет назвать пределы ремонта и предложить проверяемые варианты.\n\nПод её руководством можно безопасно осмотреть сложный предмет и понять, почему правильный адрес ещё не означает исправный вход.\n\nСпокойная коллега с чувством юмора и собственными планами. Обучение у неё требует отдельного соглашения и времени; одной удачной вылазки для звания мастера недостаточно."
+    },
+    {
+      "id": "impossible-delivery-ida",
+      "type": "character",
+      "role": "support",
+      "title": "Ида Нор",
+      "summary": "Ида Нор, 39 лет. Организует театральную артель и дела Рыночного двора. Предпочитает, чтобы её сначала спросили, а потом спасали.",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/ida-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/ida-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Ида Нор",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/ida-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/ida-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/ida-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Во дворе Иды идёт обычная жизнь: репетиции, соседи, работа и спор о том, кому нужен свободный зал. Она умеет находить площадки и договариваться с людьми.\n\nВстреча с ней даст новый взгляд на старые адреса и на то, зачем человеку посылка сегодня. Её планы не обязаны совпадать с представлением курьеров.\n\nМожет стать подругой и партнёршей героини в собственном проекте. Обстоятельства старого заказа раскроются во время игры."
+    },
+    {
+      "id": "impossible-delivery-emil",
+      "type": "character",
+      "role": "support",
+      "title": "Эмиль Торн",
+      "summary": "Эмиль Торн, 47 лет. На его складе можно купить целую комнату — после осмотра и разговора о том, кому она принадлежит.",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/emil-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/emil-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Эмиль Торн",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/emil-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/emil-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/emil-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Эмиль хранит нежилые помещения, проверяет их происхождение и ищет новых пользователей. У него есть документы, расходы и причины не обещать бесплатное решение по первой красивой истории.\n\nС ним возможны трудные переговоры, проверка сведений и поиск общего соглашения. Старый подарок и нынешнее право пользоваться пространством могут оказаться разными вопросами.\n\nНе каждый профессиональный оппонент — злодей. От результата разговора зависит конкретное место, а не судьба всего города."
+    },
+    {
+      "id": "impossible-delivery-opening",
+      "type": "plot",
+      "role": "opening",
+      "title": "Адрес: между этажами",
+      "summary": "Сухая коробка на мокром листе. Получатель ждёт в доме 11½; подниматься велено по дождю. Лев предлагает сначала проверить адрес.",
+      "image": {
+        "thumbnail": "templates/impossible-delivery/r1/images/opening-320.webp",
+        "detail": "templates/impossible-delivery/r1/images/opening-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Адрес: между этажами",
+        "variants": [
+          {
+            "url": "templates/impossible-delivery/r1/images/opening-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/opening-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/impossible-delivery/r1/images/opening-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "В бюро на Медной набережной начинается пробная смена. Тамара положила на стол условия работы, Мирон разложил маршрут, а у крышки первой посылки проходит тонкая синяя полоска света.\n\nВосемь частей приключения: дождевая лестница, необычные заказы, семейный вечер, причал зонтов и склад невостребованных комнат. У клиентов свои желания, у команды — свои интересы, а у героини остаётся право на собственный путь.\n\nМежду доставками есть место юмору, дружбе, отдыху и медленному роману. После завершения стартовой арки возможны новые заказы и жизнь в городе.\n\n«Играть» в каталоге, открытом через бота, создаст отдельную личную копию истории."
     }
   ]
 }

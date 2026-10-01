@@ -1,0 +1,123 @@
+{
+  "format": "simpledeepseek.story",
+  "version": 1,
+  "id": "impossible-delivery",
+  "title": "Служба доставки невозможного",
+  "revision": 1,
+  "modules": [
+    {
+      "id": "impossible-delivery-prompt",
+      "kind": "prompt",
+      "title": "Режиссура истории",
+      "file": "modules/prompt.md",
+      "file_sha256": "3d15ee79970b8842ecbcf04f1fd01c543ff6dc149d66437b8c325a5f8d575211",
+      "complete": true,
+      "image": null
+    },
+    {
+      "id": "impossible-delivery-setting",
+      "kind": "setting",
+      "title": "Ладин и Служба доставки невозможного",
+      "file": "modules/setting.md",
+      "file_sha256": "7cb7d731c8ba0b23cebbb561c5f6878bdcb2c4ffb0bf75f60bcef2d810cc27b9",
+      "complete": true,
+      "image": "images/setting.jpg",
+      "image_sha256": "028717283ce022099ca19948a845e76599882a62c6f4abfc13246e213ca46372",
+      "image_width": 1024,
+      "image_height": 683
+    },
+    {
+      "id": "impossible-delivery-player",
+      "kind": "player",
+      "title": "Вера Мельникова",
+      "file": "modules/player.md",
+      "file_sha256": "48860b0047834f6a73f77ec9b84db4f7df30d59c4834ad2656732e7c7dc02e8b",
+      "complete": true,
+      "image": "images/player.jpg",
+      "image_sha256": "428d2230e1038b5286ed4b4cd93d206cbf039ff5247c63ff73b12b7b10c9ff55",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "impossible-delivery-lev",
+      "kind": "lead",
+      "title": "Лев Арден",
+      "file": "modules/lev.md",
+      "file_sha256": "9906407920b836128677f6cd9041e28ae9ec3d651487345cbc86e7d36711539e",
+      "complete": true,
+      "image": "images/lev.jpg",
+      "image_sha256": "59a3560bff574c0c49d0cd36f07a49b80b83341debabc50e4664ebf13c04d9d4",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "impossible-delivery-tamara",
+      "kind": "support",
+      "title": "Тамара Клин",
+      "file": "modules/tamara.md",
+      "file_sha256": "03df97fcd7bec7b1314f7f17afafd6152d4da823a5939c3304a9bed92f0e8a38",
+      "complete": true,
+      "image": "images/tamara.jpg",
+      "image_sha256": "2d533af32c021b2f4ae01e3a1d61cec264b08f4059645023a5e0644734f0c4c1",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "impossible-delivery-miron",
+      "kind": "support",
+      "title": "Мирон Кел",
+      "file": "modules/miron.md",
+      "file_sha256": "4b4a93770ecccfe34541f01799b4d6233a3bcc9edb139e4efef8c1c0d84c4ea6",
+      "complete": true,
+      "image": "images/miron.jpg",
+      "image_sha256": "1877523a08320bb066f753b39683acdea93b1b9cd239266432a5ff822c73badc",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "impossible-delivery-agata",
+      "kind": "support",
+      "title": "Агата Штоль",
+      "file": "modules/agata.md",
+      "file_sha256": "405b2317382f9fd70e92d05937bd1c10c87ae588b80f16bcee9c2912c9c3a7b8",
+      "complete": true,
+      "image": "images/agata.jpg",
+      "image_sha256": "863cd849e7e248e0a68122c59a6970f73bc298cf48cc28742864a75ef7e6ebb4",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "impossible-delivery-ida",
+      "kind": "support",
+      "title": "Ида Нор",
+      "file": "modules/ida.md",
+      "file_sha256": "f666dd362bc8379bfef1032b88ac512bd67197da1138fc7577127b204a70d10e",
+      "complete": true,
+      "image": "images/ida.jpg",
+      "image_sha256": "6fa97e6085de7f7e33136cf48729983d1cd238c8075702412aa081a919bbe094",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "impossible-delivery-emil",
+      "kind": "support",
+      "title": "Эмиль Торн",
+      "file": "modules/emil.md",
+      "file_sha256": "db6e17f58060594abe5b4c42ab94277afe966ba360408ea489bbc5a0227ace17",
+      "complete": true,
+      "image": "images/emil.jpg",
+      "image_sha256": "8b0fe0d32e50a3180131c8b792b58ed81ca5483ab3d5e0beaab5fa82b9719832",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "impossible-delivery-opening",
+      "kind": "opening",
+      "title": "Адрес: между этажами",
+      "file": "modules/opening.md",
+      "file_sha256": "212794cbca480a3564f24a01136fbb1f99b2d17b01e6933bada1f328d3b85fa3",
+      "complete": true,
+      "image": null
+    }
+  ]
+}
