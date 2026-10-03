@@ -2,6 +2,62 @@
   "version": 2,
   "stories": [
     {
+      "id": "ashen-vows",
+      "title": "Пепел наших клятв",
+      "mode": "story",
+      "adult": true,
+      "summary": "На новой кассете с проклятием стоит твоя подпись. Бывший напарник разыскивается, а след ведёт к катастрофе, после которой вы расстались. Вернись в город стекольных печей, раскрой правду и реши, каким будет ваш новый союз — если он вообще возможен.",
+      "cover": {
+        "thumbnail": "templates/ashen-vows/r1/images/setting-320.webp",
+        "detail": "templates/ashen-vows/r1/images/setting-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Ревен и дымчатое стекло",
+        "variants": [
+          {
+            "url": "templates/ashen-vows/r1/images/setting-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/setting-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/setting-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "categories": [
+        "Тёмное фэнтези",
+        "Расследование"
+      ],
+      "tags": [
+        "18+",
+        "Охотница за проклятиями",
+        "Бывшие напарники",
+        "Медленный роман",
+        "Готический город",
+        "Моральный выбор"
+      ],
+      "author": {
+        "name": "Администрация"
+      },
+      "setting_id": "ashen-vows-setting",
+      "plot_id": "ashen-vows-opening",
+      "character_ids": [
+        "ashen-vows-player",
+        "ashen-vows-damian",
+        "ashen-vows-leda",
+        "ashen-vows-othmar",
+        "ashen-vows-vesna"
+      ],
+      "template": {
+        "manifest": "templates/ashen-vows/r1/manifest.json",
+        "sha256": "9c67096c087574f91230e27895da9e45bfe4308622c1ca1c5b4c54dd8a42c911"
+      }
+    },
+    {
       "id": "city-other-side",
       "title": "Город с обратной стороны",
       "mode": "story",
@@ -333,6 +389,251 @@
     }
   ],
   "modules": [
+    {
+      "id": "ashen-vows-setting",
+      "type": "setting",
+      "role": "setting",
+      "adult": true,
+      "mode": "story",
+      "title": "Ревен и дымчатое стекло",
+      "summary": "Ревен: город стекольных печей, закрытых лечебниц и проклятий, которые можно запереть в сосуде.",
+      "image": {
+        "thumbnail": "templates/ashen-vows/r1/images/setting-320.webp",
+        "detail": "templates/ashen-vows/r1/images/setting-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "Ревен и дымчатое стекло",
+        "variants": [
+          {
+            "url": "templates/ashen-vows/r1/images/setting-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/setting-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/setting-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Ранняя зима в Ревене. Дождь на крытых мостах, свет печей, клиники и мастерские, где чужую боль умеют отделять от человека и удерживать в дымчатом стекле.\n\nОхотники снимают проклятия, врачи лечат последствия, мастера отвечают за сосуды. У каждого ремесла свои возможности и пределы. Здесь опасно не только то, что скрывается за печатью, но и решение оставить её закрытой слишком надолго.\n\nТёмное промышленное фэнтези с расследованием, вылазками и жизнью города. Рейтинг 18+: смерть, утрата, последствия насилия, злоупотребление властью и уместная грубая речь. Романтические сцены неоткровенные."
+    },
+    {
+      "id": "ashen-vows-player",
+      "type": "character",
+      "role": "player",
+      "adult": true,
+      "mode": "story",
+      "title": "Нера Восс",
+      "summary": "Нера Восс, 29 лет. Охотница за проклятиями возвращается в город после гибели своего отряда.",
+      "image": {
+        "thumbnail": "templates/ashen-vows/r1/images/player-320.webp",
+        "detail": "templates/ashen-vows/r1/images/player-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Нера Восс",
+        "variants": [
+          {
+            "url": "templates/ashen-vows/r1/images/player-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/player-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/player-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Нера Восс — опытная охотница под контролем игрока. Три года назад пережила катастрофу в доме Святого Оллена и покинула Ревен. Теперь служебный вызов приводит её обратно.\n\nУ неё есть знания, рабочие инструменты и право самой определять условия. Её чувства, решения и отношение к прошлому принадлежат игроку. Имя, внешность и бытовые детали можно изменить до начала.\n\nПо умолчанию Дамиан был близким напарником по работе. Можно согласовать прошлый роман, но восстановление отношений не является обязательной целью."
+    },
+    {
+      "id": "ashen-vows-damian",
+      "type": "character",
+      "role": "lead",
+      "adult": true,
+      "mode": "story",
+      "title": "Дамиан Рук",
+      "summary": "Дамиан Рук, 35 лет. Бывший напарник, который предлагает проверить улику, даже если ему самому больше не верят.",
+      "image": {
+        "thumbnail": "templates/ashen-vows/r1/images/lead-320.webp",
+        "detail": "templates/ashen-vows/r1/images/lead-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Дамиан Рук",
+        "variants": [
+          {
+            "url": "templates/ashen-vows/r1/images/lead-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/lead-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/lead-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Опытный охотник с сухим юмором и привычкой брать трудные решения на себя. Когда-то они с Нерой понимали рабочие сигналы друг друга без объяснений. После катастрофы их пути разошлись.\n\nТеперь Дамиан разыскивается, а на вынесенной им кассете стоит подпись Неры. Он просит совместной проверки, но доверие нельзя вернуть одним удачным спасением.\n\nВозможны новый союз, дружба, медленная романтика, сотрудничество с условиями или окончательное расставание. Выбор остаётся у игрока."
+    },
+    {
+      "id": "ashen-vows-leda",
+      "type": "character",
+      "role": "support",
+      "adult": true,
+      "mode": "story",
+      "title": "Леда Керн",
+      "summary": "Леда Керн, 46 лет. Врач, которая спрашивает не только как остановить установку, но и кто позаботится о пациентах завтра.",
+      "image": {
+        "thumbnail": "templates/ashen-vows/r1/images/leda-320.webp",
+        "detail": "templates/ashen-vows/r1/images/leda-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Леда Керн",
+        "variants": [
+          {
+            "url": "templates/ashen-vows/r1/images/leda-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/leda-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/leda-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Леда руководит независимой клиникой на Нижней улице. Прямая, внимательная и практичная, она умеет отличить доказательство от удобного предположения.\n\nНовые жалобы после выписки заставляют её проверять работу городской службы. Пациенты для неё остаются людьми с правом отказаться, а не источниками подсказок.\n\nМожет стать союзницей и подругой, помочь с обследованием и подготовить медицинскую часть плана. У неё есть собственная работа, пределы возможностей и условия сотрудничества."
+    },
+    {
+      "id": "ashen-vows-othmar",
+      "type": "character",
+      "role": "support",
+      "adult": true,
+      "mode": "story",
+      "title": "Отмар Делл",
+      "summary": "Отмар Делл, 58 лет. Мастер стекла, который проверяет предел нагрузки раньше красивых обещаний.",
+      "image": {
+        "thumbnail": "templates/ashen-vows/r1/images/othmar-320.webp",
+        "detail": "templates/ashen-vows/r1/images/othmar-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Отмар Делл",
+        "variants": [
+          {
+            "url": "templates/ashen-vows/r1/images/othmar-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/othmar-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/othmar-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Начальник ночной смены Стекольного двора. Знает печи, сосуды и людей, с которыми работает. Точный, ироничный и упрямый в вопросах безопасности.\n\nОн может помочь обследовать необычную партию, понять схему установки и выбрать рабочий маршрут. Помощь требует плана: производство нельзя бездумно разбить и оставить людей без работы.\n\nОтмар не знает всех городских секретов, зато его профессиональный взгляд позволяет проверить то, что другие привыкли считать нормой."
+    },
+    {
+      "id": "ashen-vows-vesna",
+      "type": "character",
+      "role": "support",
+      "adult": true,
+      "mode": "story",
+      "title": "Весна Арден",
+      "summary": "Весна Арден, 51 год. Руководительница службы, от которой зависит лечение города и доступ к важным документам.",
+      "image": {
+        "thumbnail": "templates/ashen-vows/r1/images/vesna-320.webp",
+        "detail": "templates/ashen-vows/r1/images/vesna-683.webp",
+        "width": 683,
+        "height": 1024,
+        "alt": "Весна Арден",
+        "variants": [
+          {
+            "url": "templates/ashen-vows/r1/images/vesna-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/vesna-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/vesna-683.webp",
+            "width": 683
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Весна отвечает за крупные сосуды, лицензии охотников и часть помощи пациентам. Добилась полезных перемен и привыкла оценивать решения в масштабе всего города.\n\nОна может предоставить доступ, предложить контракт или потребовать официальной проверки. Её спокойная уверенность не означает, что все её объяснения верны.\n\nПереговоры, давление доказательствами и вопросы ответственности займут в расследовании своё место. Весна — самостоятельный человек с целями и страхами, а не всеведущий противник."
+    },
+    {
+      "id": "ashen-vows-opening",
+      "type": "plot",
+      "role": "opening",
+      "adult": true,
+      "mode": "story",
+      "title": "На Костяном мосту",
+      "summary": "Дождь на Костяном мосту. Бывший напарник, объявление о розыске и кассета, изготовленная вчера с твоей подписью.",
+      "image": {
+        "thumbnail": "templates/ashen-vows/r1/images/opening-320.webp",
+        "detail": "templates/ashen-vows/r1/images/opening-1024.webp",
+        "width": 1024,
+        "height": 683,
+        "alt": "На Костяном мосту",
+        "variants": [
+          {
+            "url": "templates/ashen-vows/r1/images/opening-320.webp",
+            "width": 320
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/opening-640.webp",
+            "width": 640
+          },
+          {
+            "url": "templates/ashen-vows/r1/images/opening-1024.webp",
+            "width": 1024
+          }
+        ]
+      },
+      "tags": [],
+      "author": {
+        "name": "Администрация"
+      },
+      "description": "Нера уже в Ревене, но ещё не подписала контракт со службой. На крытом мосту её ждёт Дамиан — человек, с которым она не работала три года.\n\nНа доске объявлений его фамилия стоит рядом с обвинением в нападении на лабораторию. На столике перед ним лежит запечатанный сосуд.\n\n«На этой кассете твоя подпись. Её сделали вчера. Я хочу, чтобы ты проверила сама».\n\nВстреча не предрешает согласия. Можно потребовать объяснения, выбрать независимую проверку, обратиться к другим людям или действовать по-своему."
+    },
     {
       "id": "city-other-side-setting",
       "type": "setting",

@@ -1,0 +1,101 @@
+{
+  "format": "simpledeepseek.story",
+  "version": 1,
+  "id": "ashen-vows",
+  "title": "Пепел наших клятв",
+  "revision": 1,
+  "mode": "story",
+  "adult": true,
+  "modules": [
+    {
+      "id": "ashen-vows-prompt",
+      "kind": "prompt",
+      "title": "Режиссура истории",
+      "file": "modules/prompt.md",
+      "file_sha256": "ec839692bc579354c9f821eacd9b5bdb07223f8eb42bf026a446adfe1df9f6d0",
+      "complete": true,
+      "image": null
+    },
+    {
+      "id": "ashen-vows-setting",
+      "kind": "setting",
+      "title": "Ревен и дымчатое стекло",
+      "file": "modules/setting.md",
+      "file_sha256": "5b4f904183ad686f632ac407c75f92eefc0e1fd57c226c6c1fbe753d1893c83d",
+      "complete": true,
+      "image": "images/setting.jpg",
+      "image_sha256": "9618def109a50e965ee142f522ab400b69179b7244be3384f1324272149ecc7f",
+      "image_width": 1024,
+      "image_height": 683
+    },
+    {
+      "id": "ashen-vows-player",
+      "kind": "player",
+      "title": "Нера Восс",
+      "file": "modules/player.md",
+      "file_sha256": "27f5849551042a10824fb3e7cc37f71772a62008d43ef2c9fabc41dbadc7fbd4",
+      "complete": true,
+      "image": "images/player.jpg",
+      "image_sha256": "3e4ce5432f971ef32a2113ba95b8f8e90cc4254a25dc03d205bffd0c49d5a7cd",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "ashen-vows-damian",
+      "kind": "lead",
+      "title": "Дамиан Рук",
+      "file": "modules/damian.md",
+      "file_sha256": "756a6e7b268144285b85ce36dee88e0ea25ebdb017efcb5142abb1dd18a5b569",
+      "complete": true,
+      "image": "images/lead.jpg",
+      "image_sha256": "4f8e406dc644a9366eba5911fca26ded8c74ffde631ab87591eb18e477d4c275",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "ashen-vows-leda",
+      "kind": "support",
+      "title": "Леда Керн",
+      "file": "modules/leda.md",
+      "file_sha256": "77de2011a967f380dd1783f396856c72a76b18cac7b940c12cd85b888078623e",
+      "complete": true,
+      "image": "images/leda.jpg",
+      "image_sha256": "6485360e53490951b0c25bdd70a9672c1ee7e33496696403de0bd1855ec58eeb",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "ashen-vows-othmar",
+      "kind": "support",
+      "title": "Отмар Делл",
+      "file": "modules/othmar.md",
+      "file_sha256": "373299d9058e9e0c4d698a6ad012ccab4c0dc2d013d31fa65e88469f3c42ec7c",
+      "complete": true,
+      "image": "images/othmar.jpg",
+      "image_sha256": "6f8137057a55133fc976f6de1df602e3677052d5890f13b94d56dcceac5889fa",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "ashen-vows-vesna",
+      "kind": "support",
+      "title": "Весна Арден",
+      "file": "modules/vesna.md",
+      "file_sha256": "810e05062cc9e25921b1e35d121f22a92acd580ee15dfdda4b951293856161df",
+      "complete": true,
+      "image": "images/vesna.jpg",
+      "image_sha256": "c82e0c7b393b0dd038bc23750328fb1861ab25e3da62337057fb5c5196d134d2",
+      "image_width": 683,
+      "image_height": 1024
+    },
+    {
+      "id": "ashen-vows-opening",
+      "kind": "opening",
+      "title": "На Костяном мосту",
+      "file": "modules/opening.md",
+      "file_sha256": "a2f5d399c7e16308842839ef1b9af0fea5b19bd9148599c6e118521591199331",
+      "complete": true,
+      "image": null
+    }
+  ]
+}
